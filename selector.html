@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector de Fotos - XV Años Valentina García</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Playfair+Display:wght@400;600&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --primary:    #D4478A;
+            --primary-lt: #E8A0BF;
+            --soft:       #FFF0F5;
+            --cream:      #FFF8F0;
+            --lavender:   #9B84C4;
+            --text:       #3D2B1F;
+        }
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            background: linear-gradient(135deg, #F5D0DC 0%, #FFF0F5 45%, #F0E8FF 100%);
+            color: var(--text);
+            min-height: 100vh;
+            user-select: none; -webkit-user-select: none;
+        }
+
+        .container { max-width: 1600px; margin: 0 auto; padding: 0 20px; }
+
+        /* HEADER */
+        .header {
+            text-align: center; padding: 40px 20px 30px;
+            background: rgba(255,255,255,0.75);
+            backdrop-filter: blur(12px);
+            margin-bottom: 28px;
+            border-bottom: 3px solid var(--primary);
+        }
+        .main-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            color: var(--primary); margin-bottom: 6px;
+            text-shadow: 2px 2px 6px rgba(212,71,138,0.2);
+        }
+        .subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.1rem, 3vw, 1.6rem);
+            color: var(--lavender); margin-bottom: 18px; font-weight: 600;
+        }
+        .instructions {
+            color: var(--text); font-size: 0.95rem;
+            max-width: 1000px; margin: 0 auto; line-height: 1.9;
+        }
+        .instructions strong { color: var(--primary); }
+
+        /* CONTROL PANEL */
+        .control-panel {
+            background: rgba(255,255,255,0.82);
+            backdrop-filter: blur(10px);
+            padding: 28px 20px; border-radius: 18px;
+            margin-bottom: 28px;
+            border: 2px solid rgba(212,71,138,0.3);
+        }
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: 14px; margin-bottom: 22px;
+        }
+        .stat-card {
+            background: rgba(245,208,220,0.2);
+            padding: 18px; border-radius: 14px; text-align: center;
+            border: 2px solid rgba(212,71,138,0.25);
+            transition: transform 0.3s ease;
+        }
+        .stat-card:hover { transform: translateY(-3px); background: rgba(245,208,220,0.35); }
+        .stat-icon { font-size: 2.3rem; margin-bottom: 8px; }
+        .stat-info h3 {
+            color: var(--primary); font-size: 0.85rem;
+            text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 4px;
+        }
+        .stat-count { font-size: 2.4rem; font-weight: 700; color: var(--text); }
+
+        .action-buttons {
+            display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 18px 0;
+        }
+        .btn {
+            padding: 11px 22px; border: none; border-radius: 25px;
+            font-size: 0.9rem; font-weight: 600; cursor: pointer;
+            transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 6px;
+        }
+        .btn-filter {
+            background: white; color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+        .btn-filter:hover, .btn-filter.active {
+            background: var(--primary); color: white;
+            transform: translateY(-2px); box-shadow: 0 4px 14px rgba(212,71,138,0.4);
+        }
+        .btn-export { background: #25D366; color: white; }
+        .btn-export:hover { background: #22c55e; transform: translateY(-2px); }
+        .btn-clear { background: #dc3545; color: white; }
+        .btn-clear:hover { background: #c82333; transform: translateY(-2px); }
+
+        /* GALLERY */
+        .gallery-section { padding: 10px 0 40px; }
+        .photos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 18px; margin-top: 18px;
+        }
+        .photo-card {
+            position: relative; border-radius: 14px; overflow: hidden;
+            cursor: pointer; transition: all 0.3s ease;
+            border: 3px solid transparent;
+            background: white; box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+        }
+        .photo-card:hover {
+            transform: scale(1.04);
+            box-shadow: 0 10px 28px rgba(212,71,138,0.45);
+            border-color: var(--primary);
+        }
+        .photo-card img {
+            width: 100%; height: 340px; object-fit: cover;
+            display: block; pointer-events: none;
+        }
+        .photo-number {
+            position: absolute; top: 10px; left: 10px;
+            background: rgba(212,71,138,0.9); color: white;
+            padding: 5px 13px; border-radius: 20px;
+            font-size: 0.85rem; font-weight: 700; border: 2px solid white;
+        }
+        .photo-badges {
+            position: absolute; bottom: 8px; left: 8px; right: 8px;
+            display: flex; flex-wrap: wrap; gap: 4px;
+        }
+        .badge {
+            color: white; padding: 4px 10px; border-radius: 14px;
+            font-size: 0.72rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.04em;
+        }
+        .badge.ampliacion      { background: #9c27b0; border: 2px solid #ce93d8; }
+        .badge.impresion       { background: #2196f3; border: 2px solid #90caf9; }
+        .badge.redes_sociales  { background: #4caf50; border: 2px solid #a5d6a7; }
+        .badge.invitaciones_web{ background: #ff9100; border: 2px solid #ffcc80; }
+        .badge.descartada      { background: #f44336; border: 2px solid #ef9a9a; }
+
+        /* MODAL */
+        .modal {
+            display: none; position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.96); z-index: 1000; overflow-y: auto;
+        }
+        .modal.active { display: flex; align-items: center; justify-content: center; padding: 20px; }
+        .modal-content {
+            background: var(--soft); border-radius: 22px;
+            max-width: 1400px; width: 100%;
+            max-height: 95vh; overflow-y: auto; position: relative;
+            border: 3px solid var(--primary);
+        }
+        .modal-close {
+            position: absolute; top: 14px; right: 18px;
+            font-size: 2.4rem; color: var(--primary);
+            cursor: pointer; z-index: 10; line-height: 1;
+            transition: transform 0.3s ease;
+        }
+        .modal-close:hover { transform: scale(1.2); }
+        .modal-nav {
+            position: absolute; top: 50%; transform: translateY(-50%);
+            background: rgba(212,71,138,0.9); color: white; border: none;
+            font-size: 2.8rem; padding: 18px 14px;
+            cursor: pointer; z-index: 10; transition: all 0.3s ease;
+        }
+        .modal-nav:hover { background: var(--primary); }
+        .modal-nav-prev { left: 0; border-radius: 0 10px 10px 0; }
+        .modal-nav-next { right: 0; border-radius: 10px 0 0 10px; }
+        .modal-body { display: flex; flex-direction: column; padding: 20px; }
+        .modal-image-container { position: relative; margin-bottom: 28px; }
+        .modal-image-container img {
+            width: 100%; max-height: 70vh; object-fit: contain;
+            border-radius: 12px; pointer-events: none;
+        }
+        .modal-photo-number {
+            position: absolute; top: 14px; left: 14px;
+            background: rgba(212,71,138,0.9); color: white;
+            padding: 9px 18px; border-radius: 24px;
+            font-size: 1.1rem; font-weight: 700; border: 2px solid white;
+        }
+        .modal-options {
+            background: rgba(255,255,255,0.92); padding: 28px; border-radius: 16px;
+        }
+        .modal-options h3 {
+            font-family: 'Dancing Script', cursive;
+            color: var(--primary); text-align: center;
+            font-size: 2rem; margin-bottom: 8px;
+        }
+        .modal-subtitle { text-align: center; color: var(--text); margin-bottom: 22px; font-size: 1rem; }
+        .option-buttons {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: 14px; margin-bottom: 22px;
+        }
+        .option-btn {
+            background: white; border: 3px solid var(--primary);
+            padding: 22px 18px; border-radius: 14px; cursor: pointer;
+            transition: all 0.3s ease; color: var(--text);
+            font-size: 0.95rem; text-align: center;
+        }
+        .option-btn:hover { background: #F5D0DC; transform: scale(1.04); }
+        .option-btn.selected { background: var(--primary); color: white; }
+        .option-icon { display: block; font-size: 2.8rem; margin-bottom: 10px; }
+        .option-label { font-weight: 700; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .edit-section { margin-top: 22px; padding-top: 22px; border-top: 2px solid var(--primary-lt); }
+        .edit-section label { display: block; color: var(--primary); font-weight: 700; margin-bottom: 8px; font-size: 1rem; }
+        .edit-section textarea {
+            width: 100%; min-height: 90px; padding: 14px; border-radius: 10px;
+            border: 2px solid var(--primary-lt); background: white; color: var(--text);
+            font-family: 'Raleway', sans-serif; font-size: 0.95rem; resize: vertical;
+        }
+        .edit-section textarea:focus { outline: none; border-color: var(--primary); }
+
+        .footer {
+            text-align: center; padding: 36px 20px;
+            color: var(--text); background: rgba(255,255,255,0.65);
+            margin-top: 36px; border-top: 3px solid var(--primary);
+        }
+
+        .loading {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.8); align-items: center; justify-content: center;
+            z-index: 2000; display: none;
+        }
+        .loading.active { display: flex; }
+        .spinner {
+            border: 5px solid rgba(212,71,138,0.3);
+            border-top: 5px solid var(--primary);
+            border-radius: 50%; width: 58px; height: 58px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        @media (max-width: 768px) {
+            .photos-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+            .photo-card img { height: 250px; }
+            .modal-nav { font-size: 2rem; padding: 14px 10px; }
+            .option-buttons { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="loading" id="loading"><div class="spinner"></div></div>
+
+    <header class="header">
+        <h1 class="main-title">Selector de Fotos</h1>
+        <p class="subtitle">XV Años de Por confirmar (Hija de Maricela Aroche)</p>
+        <div class="instructions">
+            <p><strong>Instrucciones:</strong> Haz clic en cada foto para seleccionar su uso. Puedes elegir múltiples opciones por foto.</p>
+            <p style="margin-top:8px;"><strong>Categorías:</strong></p>
+            <ul style="list-style:none;padding:0;margin-top:8px;">
+                <li>📸 <strong>Ampliación</strong> — Para ampliar e imprimir en gran tamaño</li>
+                <li>🖼️ <strong>Impresión</strong> — Para imprimir en tamaño estándar (5×7)</li>
+                <li>📱 <strong>Redes Sociales</strong> — Para compartir en redes sociales</li>
+                <li>💌 <strong>Inv. Web</strong> — Para usar en la invitación digital</li>
+                <li>🗑️ <strong>Descartar</strong> — Fotos que no deseas usar</li>
+            </ul>
+            <p style="margin-top:10px;">Cuando presiones <strong>"Enviar Reporte"</strong>, se abrirá WhatsApp con tu selección lista.</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="control-panel">
+            <div class="stats-row">
+                <div class="stat-card"><div class="stat-icon">📸</div><div class="stat-info"><h3>Ampliación</h3><div class="stat-count" id="count-ampliacion">0</div></div></div>
+                <div class="stat-card"><div class="stat-icon">🖼️</div><div class="stat-info"><h3>Impresión</h3><div class="stat-count" id="count-impresion">0</div></div></div>
+                <div class="stat-card"><div class="stat-icon">📱</div><div class="stat-info"><h3>Redes Sociales</h3><div class="stat-count" id="count-redes_sociales">0</div></div></div>
+                <div class="stat-card"><div class="stat-icon">💌</div><div class="stat-info"><h3>Inv. Web</h3><div class="stat-count" id="count-invitaciones_web">0</div></div></div>
+                <div class="stat-card"><div class="stat-icon">🗑️</div><div class="stat-info"><h3>Descartadas</h3><div class="stat-count" id="count-descartada">0</div></div></div>
+            </div>
+            <div class="action-buttons">
+                <button class="btn btn-filter active" data-filter="all"><i class="fas fa-images"></i> Todas</button>
+                <button class="btn btn-filter" data-filter="ampliacion"><i class="fas fa-expand"></i> Ampliación</button>
+                <button class="btn btn-filter" data-filter="impresion"><i class="fas fa-print"></i> Impresión</button>
+                <button class="btn btn-filter" data-filter="redes_sociales"><i class="fas fa-share-alt"></i> Redes</button>
+                <button class="btn btn-filter" data-filter="invitaciones_web"><i class="fas fa-envelope"></i> Inv. Web</button>
+                <button class="btn btn-filter" data-filter="descartada"><i class="fas fa-trash"></i> Descartadas</button>
+                <button class="btn btn-export" onclick="exportarSeleccion()"><i class="fab fa-whatsapp"></i> Enviar Reporte</button>
+                <button class="btn btn-clear" onclick="limpiarSeleccion()"><i class="fas fa-eraser"></i> Limpiar Todo</button>
+            </div>
+        </div>
+
+        <section class="gallery-section">
+            <div class="photos-grid" id="photosGrid"></div>
+        </section>
+    </div>
+
+    <div class="modal" id="photoModal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <button class="modal-nav modal-nav-prev" onclick="navigatePhoto(-1)"><i class="fas fa-chevron-left"></i></button>
+            <button class="modal-nav modal-nav-next" onclick="navigatePhoto(1)"><i class="fas fa-chevron-right"></i></button>
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <img id="modalImage" src="" alt="">
+                    <div class="modal-photo-number" id="modalPhotoNumber">#001</div>
+                </div>
+                <div class="modal-options">
+                    <h3>Selecciona el uso de esta foto</h3>
+                    <p class="modal-subtitle">Puedes elegir una o varias opciones</p>
+                    <div class="option-buttons">
+                        <div class="option-btn" data-option="ampliacion"><span class="option-icon">📸</span><div class="option-label">Ampliación</div></div>
+                        <div class="option-btn" data-option="impresion"><span class="option-icon">🖼️</span><div class="option-label">Impresión</div></div>
+                        <div class="option-btn" data-option="redes_sociales"><span class="option-icon">📱</span><div class="option-label">Redes Sociales</div></div>
+                        <div class="option-btn" data-option="invitaciones_web"><span class="option-icon">💌</span><div class="option-label">Inv. Web</div></div>
+                        <div class="option-btn" data-option="descartada"><span class="option-icon">🗑️</span><div class="option-label">Descartar</div></div>
+                    </div>
+                    <div class="edit-section">
+                        <label><i class="fas fa-edit"></i> Comentarios o Ediciones Requeridas</label>
+                        <textarea id="editNotes" placeholder="Ejemplo: Recortar fondo, mejorar iluminación, eliminar objetos..."></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>🌸 <strong>XV Años de Valentina Samantha Hernández</strong> 🌸</p>
+        <p style="margin-top:6px;font-size:0.85rem;color:#9B8A84;">27 de Junio de 2026 · León, Guanajuato</p>
+    </footer>
+
+    <script>
+        document.addEventListener('contextmenu', e => e.preventDefault());
+        document.addEventListener('dragstart', e => { if (e.target.tagName === 'IMG') e.preventDefault(); });
+
+        let currentPhotoIndex = 0;
+        let selections = typeof defaultSelections !== 'undefined' ? {...defaultSelections} : {};
+
+        const STORAGE_KEY = 'xv_valentina_samantha';
+        function loadSelections() {
+            try {
+                const saved = localStorage.getItem(STORAGE_KEY);
+                if (saved) selections = { ...selections, ...JSON.parse(saved) };
+            } catch(e) {}
+        }
+        function saveSelections() {
+            try { localStorage.setItem(STORAGE_KEY, JSON.stringify(selections)); } catch(e) {}
+        }
+        loadSelections();
+        let activeFilter = 'all';
+
+        function renderGallery() {
+            const grid = document.getElementById('photosGrid');
+            grid.innerHTML = '';
+            photos.forEach((photo, index) => {
+                if (activeFilter !== 'all' && (!selections[photo.name] || !selections[photo.name].categories.includes(activeFilter))) return;
+                const card = document.createElement('div');
+                card.className = 'photo-card';
+                card.onclick = () => openModal(index);
+                const badges = (selections[photo.name]?.categories || [])
+                    .map(cat => `<span class="badge ${cat}">${getCategoryLabel(cat)}</span>`).join('');
+                card.innerHTML = `
+                    <img src="${photo.path}" alt="Foto ${index + 1}" loading="lazy">
+                    <div class="photo-number">#${String(index + 1).padStart(3, '0')}</div>
+                    <div class="photo-badges">${badges}</div>`;
+                grid.appendChild(card);
+            });
+        }
+
+        function openModal(index) {
+            currentPhotoIndex = index;
+            const photo = photos[index];
+            document.getElementById('modalImage').src = photo.path;
+            document.getElementById('modalPhotoNumber').textContent = `#${String(index + 1).padStart(3, '0')}`;
+            document.getElementById('photoModal').classList.add('active');
+            const sel = selections[photo.name] || { categories: [], notes: '' };
+            document.querySelectorAll('.option-btn').forEach(btn =>
+                btn.classList.toggle('selected', sel.categories.includes(btn.dataset.option)));
+            document.getElementById('editNotes').value = sel.notes || '';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('photoModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function navigatePhoto(dir) {
+            currentPhotoIndex = (currentPhotoIndex + dir + photos.length) % photos.length;
+            openModal(currentPhotoIndex);
+        }
+
+        document.querySelectorAll('.option-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const photo = photos[currentPhotoIndex];
+                const option = this.dataset.option;
+                if (!selections[photo.name]) selections[photo.name] = { categories: [], notes: '' };
+                const cats = selections[photo.name].categories;
+                const idx = cats.indexOf(option);
+                if (idx > -1) { cats.splice(idx, 1); this.classList.remove('selected'); }
+                else { cats.push(option); this.classList.add('selected'); }
+                updateStats(); renderGallery(); saveSelections();
+            });
+        });
+
+        document.getElementById('editNotes').addEventListener('input', function() {
+            const photo = photos[currentPhotoIndex];
+            if (!selections[photo.name]) selections[photo.name] = { categories: [], notes: '' };
+            selections[photo.name].notes = this.value; saveSelections();
+        });
+
+        function updateStats() {
+            const counts = { ampliacion:0, impresion:0, redes_sociales:0, invitaciones_web:0, descartada:0 };
+            Object.values(selections).forEach(s =>
+                s.categories.forEach(cat => { if (counts[cat] !== undefined) counts[cat]++; }));
+            Object.keys(counts).forEach(cat =>
+                document.getElementById(`count-${cat}`).textContent = counts[cat]);
+            return counts;
+        }
+
+        document.querySelectorAll('.btn-filter').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.btn-filter').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                activeFilter = this.dataset.filter;
+                renderGallery();
+            });
+        });
+
+        function exportarSeleccion() {
+            const stats = updateStats();
+            let msg = '🌸 SELECCIÓN DE FOTOS - XV AÑOS VALENTINA SAMANTHA\n';
+            msg += '═══════════════════════════════════════════\n\n';
+            msg += `📊 RESUMEN:\n`;
+            msg += `   Total de fotos: ${photos.length}\n`;
+            msg += `   📸 Ampliación: ${stats.ampliacion}\n`;
+            msg += `   🖼️  Impresión: ${stats.impresion}\n`;
+            msg += `   📱 Redes sociales: ${stats.redes_sociales}\n`;
+            msg += `   💌 Inv. web: ${stats.invitaciones_web}\n`;
+            msg += `   ❌ Descartadas: ${stats.descartada}\n\n`;
+            const cats = {
+                ampliacion:'📸 AMPLIACIÓN', impresion:'🖼️  IMPRESIÓN',
+                redes_sociales:'📱 REDES SOCIALES', invitaciones_web:'💌 INV. WEB', descartada:'❌ DESCARTADAS'
+            };
+            Object.keys(cats).forEach(cat => {
+                const fotos = photos
+                    .map((p, i) => ({ ...p, num: i + 1 }))
+                    .filter(p => selections[p.name]?.categories?.includes(cat));
+                if (fotos.length) {
+                    msg += `${cats[cat]}:\n`;
+                    fotos.forEach(f => { msg += `   • #${f.num} - ${f.filename}\n`; });
+                    msg += `   Total: ${fotos.length}\n\n`;
+                }
+            });
+            const notas = photos
+                .map((p, i) => ({ ...p, num: i + 1 }))
+                .filter(p => selections[p.name]?.notes?.trim());
+            if (notas.length) {
+                msg += `💬 COMENTARIOS:\n`;
+                notas.forEach(p => { msg += `   📸 Foto #${p.num}: ${selections[p.name].notes}\n`; });
+            }
+            msg += `\n📅 Generado: ${new Date().toLocaleString('es-MX')}\n`;
+            window.open(`https://wa.me/524779203776?text=${encodeURIComponent(msg)}`, '_blank');
+        }
+
+        function limpiarSeleccion() {
+            if (confirm('¿Limpiar toda la selección?')) {
+                selections = {}; saveSelections(); updateStats(); renderGallery(); saveSelections();
+            }
+        }
+
+        function getCategoryLabel(cat) {
+            return { ampliacion:'Ampliación', impresion:'Impresión', redes_sociales:'Redes',
+                     invitaciones_web:'Inv. Web', descartada:'Descartada' }[cat] || cat;
+        }
+
+        document.addEventListener('keydown', e => {
+            if (document.getElementById('photoModal').classList.contains('active')) {
+                if (e.key === 'ArrowLeft')  navigatePhoto(-1);
+                else if (e.key === 'ArrowRight') navigatePhoto(1);
+                else if (e.key === 'Escape') closeModal();
+            }
+        });
+    </script>
+    <script src="photos_list.js"></script>
+    <script src="default_selections.js"></script>
+    <script src="visitas.js?v=1"></script>
+<script src="js/selector-sb-inline.js"></script>
+<script src="js/foro7-footer.js"></script>
+</body>
+</html>

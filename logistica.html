@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logistica - XV Años Aroche | Foro 7</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #F5D0DC 0%, #E8D5F5 100%);
+            color: #333; padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px; margin: 0 auto;
+            background: white; border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #D4478A 0%, #9B84C4 100%);
+            color: white; padding: 3rem 2rem; text-align: center;
+        }
+        .header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .header p { font-size: 1.1rem; opacity: 0.9; }
+
+        .nav-links {
+            display: flex; justify-content: center;
+            gap: 15px; margin: 20px 0; flex-wrap: wrap;
+        }
+        .nav-links a {
+            display: inline-block;
+            background: rgba(255,255,255,0.2); color: white;
+            padding: 10px 25px; border-radius: 25px;
+            text-decoration: none; transition: all 0.3s; font-weight: 600;
+        }
+        .nav-links a:hover {
+            background: rgba(255,255,255,0.3); transform: translateY(-2px);
+        }
+
+        .content { padding: 3rem 2rem; }
+
+        .section { margin-bottom: 3rem; }
+        .section-title {
+            font-size: 1.8rem; color: #D4478A;
+            margin-bottom: 1.5rem; padding-bottom: 0.5rem;
+            border-bottom: 3px solid #D4478A;
+            display: flex; align-items: center; gap: 10px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .info-card {
+            background: linear-gradient(135deg, #fce7f3 0%, #f3e8ff 100%);
+            padding: 2rem; border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .info-card h3 { color: #9B84C4; margin-bottom: 1rem; font-size: 1.3rem; }
+        .info-card p { margin-bottom: 0.5rem; line-height: 1.6; }
+        .info-card strong { color: #D4478A; }
+
+        .checklist { list-style: none; }
+        .checklist li {
+            padding: 0.75rem; margin-bottom: 0.5rem;
+            background: #f8f9fa; border-left: 4px solid #D4478A;
+            border-radius: 5px; display: flex; align-items: center; gap: 10px;
+        }
+        .checklist li:before { content: "[ ]"; font-size: 1rem; color: #D4478A; font-weight: bold; }
+        .checklist li.completed:before { content: "[X]"; color: #10b981; }
+
+        .timeline { position: relative; padding-left: 2rem; }
+        .timeline:before {
+            content: ""; position: absolute;
+            left: 0; top: 0; bottom: 0; width: 3px;
+            background: linear-gradient(180deg, #D4478A 0%, #9B84C4 100%);
+        }
+        .timeline-item {
+            position: relative; margin-bottom: 2rem; padding-left: 2rem;
+        }
+        .timeline-item:before {
+            content: ""; position: absolute;
+            left: -2.6rem; top: 0;
+            width: 20px; height: 20px; border-radius: 50%;
+            background: white; border: 3px solid #D4478A;
+        }
+        .timeline-item.completed:before { background: #10b981; border-color: #10b981; }
+        .timeline-date { font-weight: 600; color: #D4478A; margin-bottom: 0.5rem; }
+
+        .status-badge {
+            display: inline-block; padding: 0.25rem 1rem;
+            border-radius: 20px; font-size: 0.9rem; font-weight: 600; margin-left: 0.5rem;
+        }
+        .status-completed { background: #d1fae5; color: #065f46; }
+        .status-pending   { background: #fef3c7; color: #92400e; }
+        .status-urgent    { background: #fee2e2; color: #991b1b; }
+
+        .contact-box {
+            background: linear-gradient(135deg, #D4478A 0%, #9B84C4 100%);
+            color: white; padding: 2rem; border-radius: 15px; text-align: center;
+        }
+        .contact-box h3 { margin-bottom: 1rem; }
+        .contact-box a { color: white; text-decoration: underline; }
+
+        .protocol-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        .protocol-table th, .protocol-table td {
+            border: 1px solid #e5e7eb; padding: 0.75rem; text-align: left;
+        }
+        .protocol-table th {
+            background: linear-gradient(135deg, #D4478A 0%, #9B84C4 100%); color: white;
+        }
+        .protocol-table tr:nth-child(even) { background-color: #fce7f3; }
+
+        @media (max-width: 768px) {
+            .info-grid { grid-template-columns: 1fr; }
+            .header h1 { font-size: 2rem; }
+            .protocol-table { font-size: 0.9rem; }
+            body { padding: 1rem; }
+        }
+    </style>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Logistica del Evento</h1>
+            <p>XV Anos de Por confirmar (Hija de Maricela Aroche)</p>
+            <p>27 de Junio de 2026</p>
+            <div class="nav-links">
+                <a href="contrato.html">Contrato</a>
+                <a href="logistica.html">Logistica</a>
+                <a href="selector.html">Selector de Fotos</a>
+                <a href="invitados.html">Invitados</a>
+                <a href="datos.html">📋 Datos</a>
+            </div>
+        </div>
+
+        <div class="content">
+
+            <!-- Informacion General -->
+            <section class="section">
+                <h2 class="section-title">Informacion General del Evento</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>Quinceanera</h3>
+                        <p><strong>Nombre:</strong> Por confirmar (Hija de Maricela Aroche)</p>
+                        <p><strong>Fecha de fiesta:</strong> Sábado 27 de Junio de 2026</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Padres</h3>
+                        <p><strong>Madre:</strong> Por confirmar</p>
+                        <p><strong>Padre:</strong> Por confirmar</p>
+                        <p><strong>Contacto:</strong> 477 468 7824</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Padrinos</h3>
+                        <p><strong>Padrinos:</strong></p>
+                        <p>Por confirmar</p>
+                        <p>Por confirmar</p>
+                        <p>Por confirmar</p>
+                        <p>Por confirmar</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Lugares del Evento -->
+            <section class="section">
+                <h2 class="section-title">Lugares del Evento</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>Ceremonia Religiosa (Misa)</h3>
+                        <p><strong>Templo:</strong> Catedral Metropolitana</p>
+                        <p><strong>Ubicacion:</strong> León, Guanajuato</p>
+                        <p><strong>Hora:</strong> 1:00 PM - 2:00 PM</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Recepcion (Fiesta)</h3>
+                        <p><strong>Lugar:</strong> Salón Margaritas (10 de Mayo)</p>
+                        <p><strong>Ubicacion:</strong> Leon, Guanajuato</p>
+                        <p><strong>Hora:</strong> 2:00 PM (recepción) · 3:00 PM (sonora)</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Sesion Fotografica</h3>
+                        <p><strong>Fecha:</strong> Por confirmar</p>
+                        <p><strong>Hora:</strong> 4:00 PM</p>
+                        <p><strong>Lugar:</strong> Por confirmar, León, Guanajuato</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Protocolo -->
+            <section class="section">
+                <h2 class="section-title">Protocolo del Evento (Minuto a Minuto)</h2>
+                <table class="protocol-table">
+                    <thead>
+                        <tr>
+                            <th>Hora</th>
+                            <th>Actividad</th>
+                            <th>Lugar / Notas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1:00 PM - 2:00 PM</td>
+                            <td>Misa de XV Anos</td>
+                            <td>Catedral Metropolitana, León, Guanajuato</td>
+                        </tr>
+                        <tr>
+                            <td>3:00 PM</td>
+                            <td>Llegada a Quinta San Gregorio</td>
+                            <td>Salón Margaritas (10 de Mayo)</td>
+                        </tr>
+                        <tr>
+                            <td>3:00 PM en adelante</td>
+                            <td>Comida / Recepcion</td>
+                            <td>Salón Margaritas (10 de Mayo)</td>
+                        </tr>
+                        <tr>
+                            <td>Por confirmar</td>
+                            <td>Vals (30 min - 1 hr)</td>
+                            <td>Vals principal y sorpresas</td>
+                        </tr>
+                        <tr>
+                            <td>Por confirmar</td>
+                            <td>Bailes Sorpresa</td>
+                            <td>Despues del vals</td>
+                        </tr>
+                        <tr>
+                            <td>Por confirmar</td>
+                            <td>Brindis</td>
+                            <td>Momento especial con la familia</td>
+                        </tr>
+                        <tr>
+                            <td>Por confirmar</td>
+                            <td>Entrega de Rosas</td>
+                            <td>Ceremonia tradicional</td>
+                        </tr>
+                        <tr>
+                            <td>Por confirmar</td>
+                            <td>Pastel</td>
+                            <td>Partido de pastel</td>
+                        </tr>
+                        <tr>
+                            <td>Por confirmar</td>
+                            <td>Cierre del evento</td>
+                            <td>Por confirmar</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Timeline -->
+            <section class="section">
+                <h2 class="section-title">Cronologia del Proyecto</h2>
+                <div class="timeline">
+                    <div class="timeline-item completed">
+                        <p class="timeline-date">Noviembre 2025 <span class="status-badge status-completed">Completado</span></p>
+                        <p>Primer contacto y cotizacion del paquete $6,500</p>
+                    </div>
+                    <div class="timeline-item completed">
+                        <p class="timeline-date">Por confirmar <span class="status-badge status-completed">Completado</span></p>
+                        <p>Recepcion de apartado via ___________________</p>
+                    </div>
+                    <div class="timeline-item">
+                        <p class="timeline-date">Por confirmar <span class="status-badge status-pending">Proximo</span></p>
+                        <p>Sesion fotografica previa al evento - 4:00 PM</p>
+                    </div>
+                    <div class="timeline-item">
+                        <p class="timeline-date">20 de Junio de 2026 <span class="status-badge status-urgent">Importante</span></p>
+                        <p>Fecha limite de pago del saldo restante</p>
+                        <p style="font-size:0.9em;color:#666;margin-top:0.5rem;">8 dias antes del evento</p>
+                    </div>
+                    <div class="timeline-item">
+                        <p class="timeline-date">27 de Junio de 2026 <span class="status-badge status-pending">Pendiente</span></p>
+                        <p><strong>DIA DEL EVENTO</strong></p>
+                        <p>1:00 PM - Misa en Catedral Metropolitana</p>
+                        <p>3:00 P.M. - Llegada a Salón Margaritas (10 de Mayo)</p>
+                        <p>Fiesta y celebracion</p>
+                    </div>
+                    <div class="timeline-item">
+                        <p class="timeline-date">Mayo-Junio, 2026 <span class="status-badge status-pending">Pendiente</span></p>
+                        <p>Entrega de material final (30-45 dias despues del evento)</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Checklist -->
+            <section class="section">
+                <h2 class="section-title">Checklist Foro 7 - Antes del Evento</h2>
+
+                <h3 style="color:#9B84C4;margin:1.5rem 0 1rem;">Sesion Previa</h3>
+                <ul class="checklist">
+                    <li class="completed">Coordinar fecha de sesion con la clienta</li>
+                    <li class="completed">Coordinar hora de sesion (3:00 PM)</li>
+                    <li>Verificar que tenga vestido, ramo y accesorios</li>
+                    <li>Verificar equipo fotografico (camaras, lentes)</li>
+                    <li>Cargar todas las baterias</li>
+                    <li>Formatear tarjetas de memoria</li>
+                    <li>Llevar reflectores/iluminacion portatil</li>
+                </ul>
+
+                <h3 style="color:#9B84C4;margin:1.5rem 0 1rem;">Dia del Evento</h3>
+                <ul class="checklist">
+                    <li>Llegar 30 minutos antes a la misa</li>
+                    <li>Confirmar ubicacion exacta de Catedral Metropolitana, León, Guanajuato</li>
+                    <li>Confirmar ubicacion exacta de Salón Margaritas (10 de Mayo)</li>
+                    <li>Verificar hora exacta de misa (1:00 PM)</li>
+                    <li>Verificar hora exacta de llegada a la granja</li>
+                    <li>Verificar equipo completo (camaras, lentes, audio)</li>
+                    <li>Cargar todas las baterias (foto, video)</li>
+                    <li>Llevar baterias de repuesto</li>
+                    <li>Llevar tarjetas de memoria formateadas</li>
+                    <li>Verificar iluminacion (flashes foto, luces video)</li>
+                    <li>Confirmar recepcion del saldo pendiente</li>
+                </ul>
+
+                <h3 style="color:#9B84C4;margin:1.5rem 0 1rem;">Material Requerido del Cliente</h3>
+                <ul class="checklist">
+                    <li>Fotos de nina a grande (para videoclip)</li>
+                    <li>Fotos de madrinas y padrinos</li>
+                    <li>Protocolo/minuto a minuto confirmado</li>
+                    <li>Direccion exacta de la Salón Margaritas (10 de Mayo)</li>
+                </ul>
+
+                <h3 style="color:#9B84C4;margin:1.5rem 0 1rem;">Post-Evento</h3>
+                <ul class="checklist">
+                    <li>Respaldar todo el material (fotos, video)</li>
+                    <li>Editar fotografias</li>
+                    <li>Editar video (musicalizar y titular)</li>
+                    <li>Crear videoclip para proyeccion</li>
+                    <li>Cliente selecciona 100 fotos para impresion</li>
+                    <li>Imprimir fotografias 5x7"</li>
+                    <li>Imprimir ampliacion 50x60 cm con marco</li>
+                    <li>Preparar USB con cajas impresas</li>
+                    <li>Entregar material completo al cliente</li>
+                </ul>
+            </section>
+
+            <!-- Informacion Pendiente -->
+            <section class="section">
+                <h2 class="section-title">Informacion Pendiente</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>Confirmado</h3>
+                        <ul style="list-style:none;padding:0;">
+                            <li style="margin-bottom:0.5rem;">[X] Nombre: Por confirmar (Hija de Maricela Aroche)</li>
+                            <li style="margin-bottom:0.5rem;">[X] Fecha: 27 de Junio de 2026</li>
+                            <li style="margin-bottom:0.5rem;">[X] Misa: 1:00 PM - Catedral Metropolitana, León, Guanajuato</li>
+                            <li style="margin-bottom:0.5rem;">[X] Fiesta: 3:00 P.M. - Salón Margaritas (10 de Mayo)</li>
+                            <li style="margin-bottom:0.5rem;">[X] Sesion: Por confirmar - 4:00 PM</li>
+                            <li style="margin-bottom:0.5rem;">[X] Padres: Por confirmar y Por confirmar</li>
+                            <li style="margin-bottom:0.5rem;">[X] Padrinos: Por confirmar</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <h3>Por Confirmar</h3>
+                        <ul style="list-style:none;padding:0;">
+                            <li style="margin-bottom:0.5rem;">[ ] Monto del apartado</li>
+                            <li style="margin-bottom:0.5rem;">[ ] Direccion exacta de la Salón Margaritas (10 de Mayo)</li>
+                            <li style="margin-bottom:0.5rem;">[ ] Locacion de sesion fotografica</li>
+                            <li style="margin-bottom:0.5rem;">[ ] Horario completo de la fiesta</li>
+                            <li style="margin-bottom:0.5rem;">[ ] Hora de cierre del evento</li>
+                            <li style="margin-bottom:0.5rem;">[ ] Fotos de nina a grande</li>
+                            <li style="margin-bottom:0.5rem;">[ ] Fotos de madrinas y padrinos</li>
+                            <li style="margin-bottom:0.5rem;">[ ] Minuto a minuto de la fiesta</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <h3>Notas Importantes</h3>
+                        <ul style="list-style:none;padding:0;">
+                            <li style="margin-bottom:0.5rem;">Sesion se hizo el 1 de Marzo a las 3 PM</li>
+                            <li style="margin-bottom:0.5rem;">Tema del vestido: Jardin en primavera / floral romantico</li>
+                            <li style="margin-bottom:0.5rem;">La quinceanera queria fotos en caballo en el rancho</li>
+                            <li style="margin-bottom:0.5rem;">Llegar antes al domicilio para grabar la salida</li>
+                            <li style="margin-bottom:0.5rem;">El vals dura aproximadamente de 30 min a 1 hora</li>
+                            <li style="margin-bottom:0.5rem;">Saldo pendiente debe liquidarse el 10 de Mayo</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Resumen Financiero -->
+            <section class="section">
+                <h2 class="section-title">Resumen Financiero</h2>
+                <div class="info-card">
+                    <table style="width:100%;">
+                        <tr>
+                            <td><strong>Paquete contratado:</strong></td>
+                            <td style="text-align:right;">$7,500.00 MXN</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Apartado recibido:</strong></td>
+                            <td style="text-align:right;color:#10b981;">- $__________.00 MXN</td>
+                        </tr>
+                        <tr style="border-top:2px solid #D4478A;">
+                            <td><strong>Saldo pendiente:</strong></td>
+                            <td style="text-align:right;font-weight:bold;color:#D4478A;">$__________.00 MXN</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Fecha limite de pago:</strong></td>
+                            <td style="text-align:right;">20 de Junio de 2026</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Contacto -->
+            <section class="section">
+                <div class="contact-box">
+                    <h3>Informacion de Contacto</h3>
+                    <p style="margin-bottom:1rem;">
+                        <strong>Contratante:</strong> Maricela Aroche<br>
+                        <strong>Tel/WhatsApp:</strong> <a href="https://wa.me/5214774687824">477 468 7824</a>
+                    </p>
+                    <hr style="border:1px solid rgba(255,255,255,0.3);margin:1.5rem 0;">
+                    <p>
+                        <strong>Producciones Foro 7</strong><br>
+                        <strong>WhatsApp:</strong> <a href="https://wa.me/5214779203776">477-920-3776</a><br>
+                        <strong>Email:</strong> <a href="mailto:foro7producciones@gmail.com">foro7producciones@gmail.com</a><br>
+                        <strong>Ubicacion:</strong> Padilla 112, Cumbres de Arbide, Leon, Gto.
+                    </p>
+                </div>
+            </section>
+
+        </div>
+    </div>
+    <script src="visitas.js?v=1"></script>
+<script src="js/foro7-footer.js"></script>
+</body>
+</html>
