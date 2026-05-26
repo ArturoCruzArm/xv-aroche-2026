@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selector de Fotos - XV Años Valentina García</title>
+    <title>Selector de Fotos - XV Años Grecia Yareli Aroche</title>
+    <meta name="theme-color" content="#D4478A">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -268,6 +269,14 @@
         </div>
     </header>
 
+<nav style="text-align:center;padding:10px;background:rgba(255,255,255,0.6);">
+    <a href="index.html" style="color:var(--primary);text-decoration:none;font-weight:600;margin:0 10px;">← Invitación</a>
+    <a href="contrato.html" style="color:var(--primary);text-decoration:none;font-weight:600;margin:0 10px;">Contrato</a>
+    <a href="logistica.html" style="color:var(--primary);text-decoration:none;font-weight:600;margin:0 10px;">Logística</a>
+    <a href="invitados.html" style="color:var(--primary);text-decoration:none;font-weight:600;margin:0 10px;">Invitados</a>
+    <a href="datos.html" style="color:var(--primary);text-decoration:none;font-weight:600;margin:0 10px;">📋 Datos</a>
+</nav>
+
     <div class="container">
         <div class="control-panel">
             <div class="stats-row">
@@ -324,7 +333,7 @@
     </div>
 
     <footer class="footer">
-        <p>🌸 <strong>XV Años de Valentina Samantha Hernández</strong> 🌸</p>
+        <p>🦋 <strong>XV Años de Grecia Yareli Aroche</strong> 🦋</p>
         <p style="margin-top:6px;font-size:0.85rem;color:#9B8A84;">27 de Junio de 2026 · León, Guanajuato</p>
     </footer>
 
@@ -335,7 +344,7 @@
         let currentPhotoIndex = 0;
         let selections = typeof defaultSelections !== 'undefined' ? {...defaultSelections} : {};
 
-        const STORAGE_KEY = 'xv_valentina_samantha';
+        const STORAGE_KEY = 'xv_grecia_yareli';
         function loadSelections() {
             try {
                 const saved = localStorage.getItem(STORAGE_KEY);
@@ -428,7 +437,7 @@
 
         function exportarSeleccion() {
             const stats = updateStats();
-            let msg = '🌸 SELECCIÓN DE FOTOS - XV AÑOS VALENTINA SAMANTHA\n';
+            let msg = '🌸 SELECCIÓN DE FOTOS - XV AÑOS GRECIA YARELI\n';
             msg += '═══════════════════════════════════════════\n\n';
             msg += `📊 RESUMEN:\n`;
             msg += `   Total de fotos: ${photos.length}\n`;

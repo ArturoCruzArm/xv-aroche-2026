@@ -17,9 +17,9 @@
         :root {
             --ivory:      #FFF8F0;
             --cream:      #F9EDD8;
-            --blue-light:  #E8F1F8;
-            --blue-mid:    #4a90d9;
-            --blue-deep:   #1e3a5f;
+            --blush-light: #FFF0F5;
+            --blush-mid:   #D4849A;
+            --blush-deep:  #8B4060;
             --gold-dark:   #d4af37;
             --wine:       #8B1A3E;
             --orange:     #F4875A;
@@ -55,6 +55,7 @@
             top: -60px;
             border-radius: 50% 0 50% 0;
             animation: fallPetal linear infinite;
+            will-change: transform;
         }
 
         @keyframes fallPetal {
@@ -62,6 +63,23 @@
             40%  { transform: translateY(40vh) rotate(160deg) translateX(25px); opacity: 0.6; }
             70%  { transform: translateY(75vh) rotate(280deg) translateX(-20px); opacity: 0.4; }
             100% { transform: translateY(110vh) rotate(360deg) translateX(10px); opacity: 0; }
+        }
+
+        .butterfly {
+            position: absolute;
+            top: -40px;
+            font-size: 1.2rem;
+            animation: flyButterfly linear infinite;
+            pointer-events: none;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+            will-change: transform;
+        }
+        @keyframes flyButterfly {
+            0%   { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0.7; }
+            25%  { transform: translateY(25vh) translateX(30px) rotate(10deg); opacity: 0.8; }
+            50%  { transform: translateY(50vh) translateX(-20px) rotate(-5deg); opacity: 0.7; }
+            75%  { transform: translateY(75vh) translateX(25px) rotate(8deg); opacity: 0.5; }
+            100% { transform: translateY(110vh) translateX(-10px) rotate(0deg); opacity: 0; }
         }
 
         /* ===== HERO ===== */
@@ -104,7 +122,7 @@
             font-family: 'Playfair Display', serif;
             font-size: clamp(3.5rem, 12vw, 7rem);
             font-style: italic;
-            color: var(--blue-deep);
+            color: var(--blush-deep);
             line-height: 1;
             text-shadow: 3px 6px 30px rgba(212,71,138,0.25);
             margin-bottom: 0.2rem;
@@ -230,7 +248,7 @@
             display: inline-block;
             font-size: 0.65rem; font-weight: 700;
             letter-spacing: 0.35em; text-transform: uppercase;
-            color: var(--blue-deep);
+            color: var(--blush-deep);
             background: rgba(212,71,138,0.1);
             padding: 0.3rem 0.9rem; border-radius: 50px;
             margin-bottom: 0.8rem;
@@ -281,7 +299,7 @@
         }
         .events-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
             gap: 1.5rem; margin-top: 2rem;
         }
         @media (max-width: 560px) { .events-grid { grid-template-columns: 1fr; } }
@@ -299,7 +317,7 @@
             content: '';
             position: absolute; top: 0; left: 0; right: 0;
             height: 4px;
-            background: linear-gradient(90deg, var(--blue-deep), var(--lavender), var(--sky));
+            background: linear-gradient(90deg, var(--blush-deep), var(--lavender), var(--sky));
         }
         .event-card:hover {
             transform: translateY(-6px);
@@ -309,7 +327,7 @@
         .event-type {
             font-size: 0.62rem; font-weight: 700;
             letter-spacing: 0.3em; text-transform: uppercase;
-            color: var(--blue-deep); margin-bottom: 0.5rem;
+            color: var(--blush-deep); margin-bottom: 0.5rem;
         }
         .event-name {
             font-family: 'Playfair Display', serif;
@@ -320,7 +338,7 @@
         .event-time {
             font-family: 'Dancing Script', cursive;
             font-size: 2.4rem; font-weight: 700;
-            color: var(--blue-deep); margin-bottom: 0.6rem;
+            color: var(--blush-deep); margin-bottom: 0.6rem;
         }
         .event-address {
             font-size: 0.82rem; color: var(--text-mid);
@@ -328,7 +346,7 @@
         }
         .map-btn {
             display: inline-flex; align-items: center; gap: 0.4rem;
-            background: linear-gradient(135deg, var(--blue-deep), var(--gold-dark));
+            background: linear-gradient(135deg, var(--blush-deep), var(--gold-dark));
             color: white; padding: 0.55rem 1.3rem;
             border-radius: 50px; font-size: 0.8rem; font-weight: 600;
             text-decoration: none; transition: all 0.3s ease;
@@ -337,6 +355,56 @@
         .map-btn:hover {
             transform: scale(1.06);
             box-shadow: 0 8px 24px rgba(212,71,138,0.45);
+        }
+
+        /* ===== PROTOCOL TIMELINE ===== */
+        .protocol-timeline {
+            margin-top: 3rem;
+            text-align: center;
+            padding: 2rem 1rem;
+            background: rgba(245,208,220,0.15);
+            border-radius: 22px;
+            border: 1px solid rgba(212,71,138,0.12);
+        }
+        .protocol-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            color: var(--blush-deep);
+            margin-bottom: 1.5rem;
+        }
+        .protocol-items {
+            display: inline-block;
+            text-align: left;
+            border-left: 3px solid var(--gold-dark);
+            padding-left: 1.5rem;
+        }
+        .protocol-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.6rem 0;
+            border-bottom: 1px solid rgba(212,71,138,0.08);
+        }
+        .protocol-item:last-child { border-bottom: none; }
+        .protocol-time {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--blush-deep);
+            min-width: 140px;
+            text-align: right;
+        }
+        .protocol-activity {
+            font-family: 'Raleway', sans-serif;
+            font-size: 0.92rem;
+            color: var(--text-mid);
+            font-weight: 500;
+            min-width: 140px;
+            text-align: left;
+        }
+        @media (max-width: 480px) {
+            .protocol-item { flex-direction: column; gap: 0.2rem; }
+            .protocol-time, .protocol-activity { text-align: center; min-width: auto; }
         }
 
         /* ===== FAMILY ===== */
@@ -432,7 +500,7 @@
         .footer-flowers { font-size: 1.5rem; margin-bottom: 1rem; letter-spacing: 0.5rem; }
         footer p { font-size: 0.85rem; line-height: 2.1; }
         footer a { color: var(--gold-dark); text-decoration: none; }
-        footer a:hover { color: var(--blue-light); }
+        footer a:hover { color: var(--blush-light); }
 
         /* ===== SCROLL REVEAL ===== */
         .reveal {
@@ -557,7 +625,7 @@
             display: inline-block;
             font-size: 0.65rem; font-weight: 700;
             letter-spacing: 0.35em; text-transform: uppercase;
-            color: var(--blue-deep);
+            color: var(--blush-deep);
             background: rgba(212,71,138,0.1);
             padding: 0.3rem 0.9rem; border-radius: 50px;
             margin-bottom: 1rem;
@@ -680,7 +748,7 @@
             bottom: 24px; right: 24px;
             width: 62px; height: 62px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--blue-deep), var(--gold-dark));
+            background: linear-gradient(135deg, var(--blush-deep), var(--gold-dark));
             border: none; cursor: pointer;
             z-index: 999;
             display: flex; align-items: center; justify-content: center;
@@ -700,7 +768,7 @@
             position: absolute; inset: -5px;
             border-radius: 50%;
             border: 3px solid rgba(212,71,138,0.4);
-            border-top-color: var(--blue-light);
+            border-top-color: var(--blush-light);
             animation: none;
         }
         #musicBtn.playing::before {
@@ -749,10 +817,10 @@
 
     <!-- ===== ENVELOPE OVERLAY ===== -->
     <div id="env-overlay">
-        <p class="env-deco">🌸 ✿ 🌺 ✿ 🌸</p>
+        <p class="env-deco">🦋 ✿ 🌸 ✿ 🦋</p>
         <div class="env-wrap">
             <div class="env-body"></div>
-            <div class="env-seal">🌸</div>
+            <div class="env-seal">🦋</div>
             <div class="env-flap" id="envFlap"></div>
         </div>
         <p class="env-hint">Toca para abrir tu invitación</p>
@@ -824,7 +892,7 @@
 
     <!-- ===== FOTO #041 — Ken Burns Portrait ===== -->
     <div class="photo-kb-section" id="photo-kb">
-        <img class="photo-kb-img" src="imagenes/DSC_0916.webp" alt="Grecia Yareli" draggable="false">
+        <img class="photo-kb-img" src="imagenes/ChatGPT Image 26 may 2026, 14_09_19.webp" alt="Grecia Yareli" draggable="false">
         <div class="photo-kb-overlay"></div>
         <div class="photo-kb-text" id="photoKbText">
             <p class="photo-kb-quote">Grecia Yareli</p>
@@ -844,29 +912,50 @@
             </div>
             <div class="events-grid">
                 <div class="event-card reveal delay-1">
+                    <div class="event-icon">🏠</div>
+                    <div class="event-type">Salida</div>
+                    <div class="event-name">Domicilio de la Quinceañera</div>
+                    <div class="event-time">11:00 AM</div>
+                    <div class="event-address">
+                        León, Guanajuato
+                    </div>
+                </div>
+                <div class="event-card reveal delay-2">
                     <div class="event-icon">⛪</div>
                     <div class="event-type">Misa de XV Años</div>
-                    <div class="event-name" data-campo="ceremonia-lugar">Parroquia de la Divina<br>Providencia</div>
-                    <div class="event-time" data-campo="ceremonia-hora">1:00 PM</div>
+                    <div class="event-name" data-campo="ceremonia-lugar">Catedral Metropolitana</div>
+                    <div class="event-time" data-campo="ceremonia-hora">12:00 PM</div>
                     <div class="event-address" data-campo="ceremonia-direccion">
                         León, Guanajuato
                     </div>
-                    <a href="https://maps.google.com/?q=Divina+Providencia+Le%C3%B3n+Guanajuato" target="_blank" class="map-btn" data-campo="ceremonia-maps">
+                    <a href="https://maps.google.com/?q=Catedral+Metropolitana+León+Guanajuato" target="_blank" class="map-btn" data-campo="ceremonia-maps">
                         📍 Ver en mapa
                     </a>
                 </div>
-                <div class="event-card reveal delay-2">
+                <div class="event-card reveal delay-3">
                     <div class="event-icon">🎊</div>
                     <div class="event-type">Recepción · Fiesta</div>
                     <div class="event-name"><span data-campo="recepcion-lugar">Salón Margaritas<br>(10 de Mayo)</span></div>
-                    <div class="event-time" data-campo="recepcion-hora">2:00 PM (recepción) · 3:00 PM (sonora)</div>
+                    <div class="event-time" data-campo="recepcion-hora">2:00 PM (recepción) · 2:00 PM (sonora)</div>
                     <div class="event-address" data-campo="recepcion-direccion">
                         León, Guanajuato<br>
                         <small>Detalles en Logística</small>
                     </div>
-                    <a href="https://maps.google.com/?q=Granja+Gregorio+Leon+Guanajuato" target="_blank" class="map-btn">
+                    <a href="https://maps.google.com/?q=Salon+Margaritas+10+de+Mayo+Leon+Guanajuato" target="_blank" class="map-btn">
                         📍 Ver en mapa
                     </a>
+                </div>
+            </div>
+            <div class="protocol-timeline reveal">
+                <h3 class="protocol-title">Programa de la Fiesta</h3>
+                <div class="protocol-items">
+                    <div class="protocol-item"><span class="protocol-time">2:00 PM</span><span class="protocol-activity">Botana (a partir de)</span></div>
+                    <div class="protocol-item"><span class="protocol-time">2:00 PM - 7:00 PM</span><span class="protocol-activity">Sonora Renacedora del Bajío</span></div>
+                    <div class="protocol-item"><span class="protocol-time">5:00 PM</span><span class="protocol-activity">Comida</span></div>
+                    <div class="protocol-item"><span class="protocol-time">7:00 PM - 1:00 AM</span><span class="protocol-activity">Sonido Trailero del Sabor</span></div>
+                    <div class="protocol-item"><span class="protocol-time">8:00 PM</span><span class="protocol-activity">Vals</span></div>
+                    <div class="protocol-item"><span class="protocol-time">11:00 PM</span><span class="protocol-activity">Pastel</span></div>
+                    <div class="protocol-item"><span class="protocol-time">11:30 PM</span><span class="protocol-activity">Mesa de dulces</span></div>
                 </div>
             </div>
         </div>
@@ -875,11 +964,11 @@
     <!-- ===== FOTO #051 — Cortina Reveal ===== -->
     <div class="photo-curtain-section">
         <div class="photo-curtain-wrap" id="photo-curtain-wrap">
-            <img class="photo-curtain-img" id="photoCurtain" src="imagenes/DSC_0926.webp" alt="Grecia Yareli" draggable="false">
+            <img class="photo-curtain-img" id="photoCurtain" src="imagenes/ChatGPT Image 26 may 2026, 14_09_19.webp" alt="Grecia Yareli" draggable="false" loading="lazy">
             <div class="photo-curtain-overlay"></div>
             <div class="photo-curtain-text" id="photoCurtainText">
                 <p class="photo-curtain-title">Un sueño hecho realidad</p>
-                <p class="photo-curtain-date">16 · V · MMXXVI</p>
+                <p class="photo-curtain-date">27 · VI · MMXXVI</p>
             </div>
         </div>
     </div>
@@ -920,7 +1009,7 @@
         <span class="photo-polaroid-tag">Un Momento Eterno</span>
         <h2 class="photo-polaroid-heading reveal">El Vestido de sus Sueños</h2>
         <div class="polaroid-frame reveal" id="polaroidFrame">
-            <img src="imagenes/DSC_0959.webp" alt="Grecia Yareli">
+            <img src="imagenes/ChatGPT Image 26 may 2026, 14_09_19.webp" alt="Grecia Yareli" loading="lazy">
             <p class="polaroid-caption">Grecia Yareli 🌸</p>
         </div>
         <p class="photo-polaroid-sub reveal delay-1">
@@ -933,7 +1022,7 @@
     <section id="rsvp">
         <h2 class="section-title">Confirma tu Asistencia</h2>
         <p style="text-align:center;margin-bottom:28px;opacity:.8;">
-            Por favor confirma antes del <span id="confirmacionLimite">4 de mayo de 2026</span>
+            Por favor confirma antes del <span id="confirmacionLimite">20 de junio de 2026</span>
         </p>
         <div id="personalizedWelcome" style="display:none;text-align:center;margin-bottom:24px;padding:20px;background:rgba(255,255,255,0.07);border-radius:12px;">
             <p id="guestWelcomeText" style="font-size:1.1rem;margin-bottom:8px;"></p>
@@ -979,7 +1068,7 @@
     <!-- ===== FOOTER ===== -->
     <footer>
         <div class="footer-flowers">🌸 🌺 🌷</div>
-        <p><strong style="color:white;">XV Años · Grecia Yareli Samantha Hernández</strong></p>
+        <p><strong style="color:white;">XV Años · Grecia Yareli Aroche</strong></p>
         <p>27 de Junio de 2026 · León, Guanajuato</p>
         <p style="margin-top:1rem; font-size:0.75rem; opacity:0.6;">
             Fotografía y Video Profesional ·
@@ -1014,6 +1103,20 @@
         // Initial burst
         for (let i = 0; i < 20; i++) setTimeout(spawnPetal, i * 250);
         setInterval(spawnPetal, 450);
+
+        function spawnButterfly() {
+            const el = document.createElement('div');
+            el.className = 'butterfly';
+            el.textContent = '🦋';
+            el.style.left = Math.random() * 100 + '%';
+            el.style.fontSize = (Math.random() * 0.8 + 1) + 'rem';
+            el.style.animationDuration = (Math.random() * 8 + 10) + 's';
+            el.style.animationDelay = (Math.random() * 2) + 's';
+            document.getElementById('petals').appendChild(el);
+            el.addEventListener('animationend', () => el.remove());
+        }
+        for (let i = 0; i < 5; i++) setTimeout(spawnButterfly, i * 600);
+        setInterval(spawnButterfly, 3000);
 
         /* ===== COUNTDOWN FLIP ===== */
         const cdVals = { days:'--', hours:'--', mins:'--', secs:'--' };
