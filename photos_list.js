@@ -1,9 +1,89 @@
 // Lista de fotos generada automaticamente
 // XV Aroche 2026
-// Total de fotos: 179
+// Total de fotos: 195
 // Generado: 2026-06-09
 
 const photos = [
+    {
+        "name": "1",
+        "path": "imagenes/1.webp",
+        "filename": "1.webp"
+    },
+    {
+        "name": "2",
+        "path": "imagenes/2.webp",
+        "filename": "2.webp"
+    },
+    {
+        "name": "3",
+        "path": "imagenes/3.webp",
+        "filename": "3.webp"
+    },
+    {
+        "name": "4",
+        "path": "imagenes/4.webp",
+        "filename": "4.webp"
+    },
+    {
+        "name": "5",
+        "path": "imagenes/5.webp",
+        "filename": "5.webp"
+    },
+    {
+        "name": "6",
+        "path": "imagenes/6.webp",
+        "filename": "6.webp"
+    },
+    {
+        "name": "7",
+        "path": "imagenes/7.webp",
+        "filename": "7.webp"
+    },
+    {
+        "name": "8",
+        "path": "imagenes/8.webp",
+        "filename": "8.webp"
+    },
+    {
+        "name": "9",
+        "path": "imagenes/9.webp",
+        "filename": "9.webp"
+    },
+    {
+        "name": "10",
+        "path": "imagenes/10.webp",
+        "filename": "10.webp"
+    },
+    {
+        "name": "11",
+        "path": "imagenes/11.webp",
+        "filename": "11.webp"
+    },
+    {
+        "name": "12",
+        "path": "imagenes/12.webp",
+        "filename": "12.webp"
+    },
+    {
+        "name": "13",
+        "path": "imagenes/13.webp",
+        "filename": "13.webp"
+    },
+    {
+        "name": "14",
+        "path": "imagenes/14.webp",
+        "filename": "14.webp"
+    },
+    {
+        "name": "15",
+        "path": "imagenes/15.webp",
+        "filename": "15.webp"
+    },
+    {
+        "name": "16",
+        "path": "imagenes/16.webp",
+        "filename": "16.webp"
+    },
     {
         "name": "ChatGPT Image 26 may 2026, 14_09_19",
         "path": "imagenes/ChatGPT Image 26 may 2026, 14_09_19.webp",
