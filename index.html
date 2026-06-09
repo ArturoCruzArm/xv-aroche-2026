@@ -15,22 +15,22 @@
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-            --ivory:      #FFF8F0;
-            --cream:      #F9EDD8;
-            --blush-light: #FFF0F5;
-            --blush-mid:   #D4849A;
-            --blush-deep:  #8B4060;
+            --ivory:      #FFF9F9;
+            --cream:      #FFF0F3;
+            --blush-light: #FFE8EE;
+            --blush-mid:   #F4A0B5;
+            --blush-deep:  #D46B8A;
             --gold-dark:   #d4af37;
-            --wine:       #8B1A3E;
-            --orange:     #F4875A;
+            --wine:       #C25578;
+            --orange:     #F4A0B5;
             --yellow:     #F7D070;
-            --lilac:      #C89FC9;
-            --lavender:   #9B84C4;
-            --sky:        #87C0E8;
-            --green:      #6BA65F;
-            --text-dark:  #3D2B1F;
-            --text-mid:   #6B4C50;
-            --text-light: #9B8A84;
+            --lilac:      #F8C8D8;
+            --lavender:   #E8A0BC;
+            --sky:        #FADADD;
+            --green:      #F4A0B5;
+            --text-dark:  #3D1F2B;
+            --text-mid:   #8B4060;
+            --text-light: #C88A9B;
         }
 
         html { scroll-behavior: smooth; }
@@ -91,9 +91,9 @@
             position: relative; z-index: 2;
             text-align: center;
             background:
-                radial-gradient(ellipse at 20% 10%, rgba(245,208,220,0.65) 0%, transparent 55%),
-                radial-gradient(ellipse at 80% 90%, rgba(155,132,196,0.4)  0%, transparent 55%),
-                radial-gradient(ellipse at 60% 30%, rgba(135,192,232,0.2)  0%, transparent 45%),
+                radial-gradient(ellipse at 20% 10%, rgba(255,182,203,0.5) 0%, transparent 55%),
+                radial-gradient(ellipse at 80% 90%, rgba(244,160,181,0.35) 0%, transparent 55%),
+                radial-gradient(ellipse at 60% 30%, rgba(255,218,221,0.3)  0%, transparent 45%),
                 linear-gradient(180deg, var(--cream) 0%, var(--ivory) 100%);
         }
 
@@ -293,9 +293,9 @@
         /* ===== EVENTS ===== */
         .events-section {
             background:
-                radial-gradient(ellipse at 0% 0%, rgba(245,208,220,0.4) 0%, transparent 50%),
-                radial-gradient(ellipse at 100% 100%, rgba(155,132,196,0.25) 0%, transparent 50%),
-                white;
+                radial-gradient(ellipse at 0% 0%, rgba(255,182,203,0.35) 0%, transparent 50%),
+                radial-gradient(ellipse at 100% 100%, rgba(244,160,181,0.2) 0%, transparent 50%),
+                #FFF9F9;
         }
         .events-grid {
             display: grid;
@@ -317,7 +317,7 @@
             content: '';
             position: absolute; top: 0; left: 0; right: 0;
             height: 4px;
-            background: linear-gradient(90deg, var(--blush-deep), var(--lavender), var(--sky));
+            background: linear-gradient(90deg, var(--blush-deep), var(--blush-mid), var(--blush-light));
         }
         .event-card:hover {
             transform: translateY(-6px);
@@ -669,9 +669,9 @@
         #env-overlay {
             position: fixed; inset: 0; z-index: 9999;
             background:
-                radial-gradient(ellipse at 25% 15%, rgba(245,208,220,0.75) 0%, transparent 55%),
-                radial-gradient(ellipse at 75% 85%, rgba(200,159,201,0.5)  0%, transparent 55%),
-                linear-gradient(170deg, rgba(249,237,216,0.7) 0%, rgba(255,248,240,0.7) 100%),
+                radial-gradient(ellipse at 25% 15%, rgba(255,182,203,0.6) 0%, transparent 55%),
+                radial-gradient(ellipse at 75% 85%, rgba(244,160,181,0.4)  0%, transparent 55%),
+                linear-gradient(170deg, rgba(255,240,243,0.55) 0%, rgba(255,249,249,0.55) 100%),
                 url('imagenes/4.webp') center/cover no-repeat;
             display: flex; flex-direction: column;
             align-items: center; justify-content: center;
@@ -882,7 +882,7 @@
                 Junto a mi familia, tengo el honor de invitarte<br>
                 a celebrar el día más especial de mi vida.
             </p>
-            <div class="intro-flowers">🌸 🌺 🌼 🌷 💜 🌻</div>
+            <div class="intro-flowers">🌸 🩷 🌷 💗 🌸 🩷</div>
             <blockquote class="intro-quote" data-campo="invitacion-frase">
                 "Como un jardín que florece en primavera,<br>
                 hoy comienzo una nueva etapa,<br>
@@ -1080,9 +1080,9 @@
     <script>
         /* ===== PETALS ===== */
         const PETAL_COLORS = [
-            '#F5D0DC','#E8A0BF','#D4478A','#C89FC9','#9B84C4',
-            '#87C0E8','#F7D070','#F4875A','#6BA65F','#C0355A',
-            '#FFF0A0','#FFB3CC'
+            '#FFD1DC','#FFB6C1','#F4A0B5','#FADADD','#FFC0CB',
+            '#FFE4E9','#FFB3CC','#F8C8D8','#FFFFFF','#FFF0F3',
+            '#FFD7E0','#F5A0B8'
         ];
 
         function spawnPetal() {
@@ -1260,11 +1260,11 @@
         }
     </script>
     <script>window.EVENTO_SLUG='xv-aroche-2026';</script>
-    <script src="js/evento-loader.js?v=3"></script>
-    <script src="visitas.js?v=3"></script>
+    <script src="js/evento-loader.js?v=4"></script>
+    <script src="visitas.js?v=4"></script>
 
-    <script src="js/rsvp-guest.js?v=3"></script>
-<script src="js/foro7-footer.js?v=3"></script>
+    <script src="js/rsvp-guest.js?v=4"></script>
+<script src="js/foro7-footer.js?v=4"></script>
     <script>
     (function () {
         const token = new URLSearchParams(window.location.search).get('inv');
