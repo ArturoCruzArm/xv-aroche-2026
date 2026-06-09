@@ -1,693 +1,908 @@
 // Lista de fotos generada automaticamente
-// XV Anos Valentina Samantha Hernandez
-// Total de fotos: 136
-// Generado: 2026-03-02 14:22:47
+// XV Aroche 2026
+// Total de fotos: 179
+// Generado: 2026-06-09
 
 const photos = [
     {
-        "name": "DSC_0876",
-        "path": "imagenes/DSC_0876.webp",
-        "filename": "DSC_0876.webp"
+        "name": "ChatGPT Image 26 may 2026, 14_09_19",
+        "path": "imagenes/ChatGPT Image 26 may 2026, 14_09_19.webp",
+        "filename": "ChatGPT Image 26 may 2026, 14_09_19.webp"
     },
     {
-        "name": "DSC_0877",
-        "path": "imagenes/DSC_0877.webp",
-        "filename": "DSC_0877.webp"
+        "name": "DSC_2197",
+        "path": "imagenes/DSC_2197.webp",
+        "filename": "DSC_2197.webp"
     },
     {
-        "name": "DSC_0878",
-        "path": "imagenes/DSC_0878.webp",
-        "filename": "DSC_0878.webp"
+        "name": "DSC_2198",
+        "path": "imagenes/DSC_2198.webp",
+        "filename": "DSC_2198.webp"
     },
     {
-        "name": "DSC_0879",
-        "path": "imagenes/DSC_0879.webp",
-        "filename": "DSC_0879.webp"
+        "name": "DSC_2199",
+        "path": "imagenes/DSC_2199.webp",
+        "filename": "DSC_2199.webp"
     },
     {
-        "name": "DSC_0880",
-        "path": "imagenes/DSC_0880.webp",
-        "filename": "DSC_0880.webp"
+        "name": "DSC_2200",
+        "path": "imagenes/DSC_2200.webp",
+        "filename": "DSC_2200.webp"
     },
     {
-        "name": "DSC_0881",
-        "path": "imagenes/DSC_0881.webp",
-        "filename": "DSC_0881.webp"
+        "name": "DSC_2201",
+        "path": "imagenes/DSC_2201.webp",
+        "filename": "DSC_2201.webp"
     },
     {
-        "name": "DSC_0882",
-        "path": "imagenes/DSC_0882.webp",
-        "filename": "DSC_0882.webp"
+        "name": "DSC_2202",
+        "path": "imagenes/DSC_2202.webp",
+        "filename": "DSC_2202.webp"
     },
     {
-        "name": "DSC_0883",
-        "path": "imagenes/DSC_0883.webp",
-        "filename": "DSC_0883.webp"
+        "name": "DSC_2203",
+        "path": "imagenes/DSC_2203.webp",
+        "filename": "DSC_2203.webp"
     },
     {
-        "name": "DSC_0884",
-        "path": "imagenes/DSC_0884.webp",
-        "filename": "DSC_0884.webp"
+        "name": "DSC_2204",
+        "path": "imagenes/DSC_2204.webp",
+        "filename": "DSC_2204.webp"
     },
     {
-        "name": "DSC_0885",
-        "path": "imagenes/DSC_0885.webp",
-        "filename": "DSC_0885.webp"
+        "name": "DSC_2205",
+        "path": "imagenes/DSC_2205.webp",
+        "filename": "DSC_2205.webp"
     },
     {
-        "name": "DSC_0886",
-        "path": "imagenes/DSC_0886.webp",
-        "filename": "DSC_0886.webp"
+        "name": "DSC_2206",
+        "path": "imagenes/DSC_2206.webp",
+        "filename": "DSC_2206.webp"
     },
     {
-        "name": "DSC_0887",
-        "path": "imagenes/DSC_0887.webp",
-        "filename": "DSC_0887.webp"
+        "name": "DSC_2207",
+        "path": "imagenes/DSC_2207.webp",
+        "filename": "DSC_2207.webp"
     },
     {
-        "name": "DSC_0888",
-        "path": "imagenes/DSC_0888.webp",
-        "filename": "DSC_0888.webp"
+        "name": "DSC_2208",
+        "path": "imagenes/DSC_2208.webp",
+        "filename": "DSC_2208.webp"
     },
     {
-        "name": "DSC_0889",
-        "path": "imagenes/DSC_0889.webp",
-        "filename": "DSC_0889.webp"
+        "name": "DSC_2209",
+        "path": "imagenes/DSC_2209.webp",
+        "filename": "DSC_2209.webp"
     },
     {
-        "name": "DSC_0890",
-        "path": "imagenes/DSC_0890.webp",
-        "filename": "DSC_0890.webp"
+        "name": "DSC_2210",
+        "path": "imagenes/DSC_2210.webp",
+        "filename": "DSC_2210.webp"
     },
     {
-        "name": "DSC_0891",
-        "path": "imagenes/DSC_0891.webp",
-        "filename": "DSC_0891.webp"
+        "name": "DSC_2211",
+        "path": "imagenes/DSC_2211.webp",
+        "filename": "DSC_2211.webp"
     },
     {
-        "name": "DSC_0892",
-        "path": "imagenes/DSC_0892.webp",
-        "filename": "DSC_0892.webp"
+        "name": "DSC_2212",
+        "path": "imagenes/DSC_2212.webp",
+        "filename": "DSC_2212.webp"
     },
     {
-        "name": "DSC_0893",
-        "path": "imagenes/DSC_0893.webp",
-        "filename": "DSC_0893.webp"
+        "name": "DSC_2213",
+        "path": "imagenes/DSC_2213.webp",
+        "filename": "DSC_2213.webp"
     },
     {
-        "name": "DSC_0894",
-        "path": "imagenes/DSC_0894.webp",
-        "filename": "DSC_0894.webp"
+        "name": "DSC_2214",
+        "path": "imagenes/DSC_2214.webp",
+        "filename": "DSC_2214.webp"
     },
     {
-        "name": "DSC_0895",
-        "path": "imagenes/DSC_0895.webp",
-        "filename": "DSC_0895.webp"
+        "name": "DSC_2215",
+        "path": "imagenes/DSC_2215.webp",
+        "filename": "DSC_2215.webp"
     },
     {
-        "name": "DSC_0896",
-        "path": "imagenes/DSC_0896.webp",
-        "filename": "DSC_0896.webp"
+        "name": "DSC_2216",
+        "path": "imagenes/DSC_2216.webp",
+        "filename": "DSC_2216.webp"
     },
     {
-        "name": "DSC_0897",
-        "path": "imagenes/DSC_0897.webp",
-        "filename": "DSC_0897.webp"
+        "name": "DSC_2217",
+        "path": "imagenes/DSC_2217.webp",
+        "filename": "DSC_2217.webp"
     },
     {
-        "name": "DSC_0898",
-        "path": "imagenes/DSC_0898.webp",
-        "filename": "DSC_0898.webp"
+        "name": "DSC_2218",
+        "path": "imagenes/DSC_2218.webp",
+        "filename": "DSC_2218.webp"
     },
     {
-        "name": "DSC_0899",
-        "path": "imagenes/DSC_0899.webp",
-        "filename": "DSC_0899.webp"
+        "name": "DSC_2219",
+        "path": "imagenes/DSC_2219.webp",
+        "filename": "DSC_2219.webp"
     },
     {
-        "name": "DSC_0900",
-        "path": "imagenes/DSC_0900.webp",
-        "filename": "DSC_0900.webp"
+        "name": "DSC_2220",
+        "path": "imagenes/DSC_2220.webp",
+        "filename": "DSC_2220.webp"
     },
     {
-        "name": "DSC_0901",
-        "path": "imagenes/DSC_0901.webp",
-        "filename": "DSC_0901.webp"
+        "name": "DSC_2221",
+        "path": "imagenes/DSC_2221.webp",
+        "filename": "DSC_2221.webp"
     },
     {
-        "name": "DSC_0902",
-        "path": "imagenes/DSC_0902.webp",
-        "filename": "DSC_0902.webp"
+        "name": "DSC_2222",
+        "path": "imagenes/DSC_2222.webp",
+        "filename": "DSC_2222.webp"
     },
     {
-        "name": "DSC_0903",
-        "path": "imagenes/DSC_0903.webp",
-        "filename": "DSC_0903.webp"
+        "name": "DSC_2223",
+        "path": "imagenes/DSC_2223.webp",
+        "filename": "DSC_2223.webp"
     },
     {
-        "name": "DSC_0904",
-        "path": "imagenes/DSC_0904.webp",
-        "filename": "DSC_0904.webp"
+        "name": "DSC_2224",
+        "path": "imagenes/DSC_2224.webp",
+        "filename": "DSC_2224.webp"
     },
     {
-        "name": "DSC_0905",
-        "path": "imagenes/DSC_0905.webp",
-        "filename": "DSC_0905.webp"
+        "name": "DSC_2225",
+        "path": "imagenes/DSC_2225.webp",
+        "filename": "DSC_2225.webp"
     },
     {
-        "name": "DSC_0906",
-        "path": "imagenes/DSC_0906.webp",
-        "filename": "DSC_0906.webp"
+        "name": "DSC_2226",
+        "path": "imagenes/DSC_2226.webp",
+        "filename": "DSC_2226.webp"
     },
     {
-        "name": "DSC_0907",
-        "path": "imagenes/DSC_0907.webp",
-        "filename": "DSC_0907.webp"
+        "name": "DSC_2227",
+        "path": "imagenes/DSC_2227.webp",
+        "filename": "DSC_2227.webp"
     },
     {
-        "name": "DSC_0908",
-        "path": "imagenes/DSC_0908.webp",
-        "filename": "DSC_0908.webp"
+        "name": "DSC_2228",
+        "path": "imagenes/DSC_2228.webp",
+        "filename": "DSC_2228.webp"
     },
     {
-        "name": "DSC_0909",
-        "path": "imagenes/DSC_0909.webp",
-        "filename": "DSC_0909.webp"
+        "name": "DSC_2229",
+        "path": "imagenes/DSC_2229.webp",
+        "filename": "DSC_2229.webp"
     },
     {
-        "name": "DSC_0910",
-        "path": "imagenes/DSC_0910.webp",
-        "filename": "DSC_0910.webp"
+        "name": "DSC_2230",
+        "path": "imagenes/DSC_2230.webp",
+        "filename": "DSC_2230.webp"
     },
     {
-        "name": "DSC_0911",
-        "path": "imagenes/DSC_0911.webp",
-        "filename": "DSC_0911.webp"
+        "name": "DSC_2231",
+        "path": "imagenes/DSC_2231.webp",
+        "filename": "DSC_2231.webp"
     },
     {
-        "name": "DSC_0912",
-        "path": "imagenes/DSC_0912.webp",
-        "filename": "DSC_0912.webp"
+        "name": "DSC_2232",
+        "path": "imagenes/DSC_2232.webp",
+        "filename": "DSC_2232.webp"
     },
     {
-        "name": "DSC_0913",
-        "path": "imagenes/DSC_0913.webp",
-        "filename": "DSC_0913.webp"
+        "name": "DSC_2233",
+        "path": "imagenes/DSC_2233.webp",
+        "filename": "DSC_2233.webp"
     },
     {
-        "name": "DSC_0914",
-        "path": "imagenes/DSC_0914.webp",
-        "filename": "DSC_0914.webp"
+        "name": "DSC_2234",
+        "path": "imagenes/DSC_2234.webp",
+        "filename": "DSC_2234.webp"
     },
     {
-        "name": "DSC_0915",
-        "path": "imagenes/DSC_0915.webp",
-        "filename": "DSC_0915.webp"
+        "name": "DSC_2235",
+        "path": "imagenes/DSC_2235.webp",
+        "filename": "DSC_2235.webp"
     },
     {
-        "name": "DSC_0916",
-        "path": "imagenes/DSC_0916.webp",
-        "filename": "DSC_0916.webp"
+        "name": "DSC_2236",
+        "path": "imagenes/DSC_2236.webp",
+        "filename": "DSC_2236.webp"
     },
     {
-        "name": "DSC_0917",
-        "path": "imagenes/DSC_0917.webp",
-        "filename": "DSC_0917.webp"
+        "name": "DSC_2237",
+        "path": "imagenes/DSC_2237.webp",
+        "filename": "DSC_2237.webp"
     },
     {
-        "name": "DSC_0918",
-        "path": "imagenes/DSC_0918.webp",
-        "filename": "DSC_0918.webp"
+        "name": "DSC_2238",
+        "path": "imagenes/DSC_2238.webp",
+        "filename": "DSC_2238.webp"
     },
     {
-        "name": "DSC_0919",
-        "path": "imagenes/DSC_0919.webp",
-        "filename": "DSC_0919.webp"
+        "name": "DSC_2239",
+        "path": "imagenes/DSC_2239.webp",
+        "filename": "DSC_2239.webp"
     },
     {
-        "name": "DSC_0920",
-        "path": "imagenes/DSC_0920.webp",
-        "filename": "DSC_0920.webp"
+        "name": "DSC_2240",
+        "path": "imagenes/DSC_2240.webp",
+        "filename": "DSC_2240.webp"
     },
     {
-        "name": "DSC_0921",
-        "path": "imagenes/DSC_0921.webp",
-        "filename": "DSC_0921.webp"
+        "name": "DSC_2241",
+        "path": "imagenes/DSC_2241.webp",
+        "filename": "DSC_2241.webp"
     },
     {
-        "name": "DSC_0922",
-        "path": "imagenes/DSC_0922.webp",
-        "filename": "DSC_0922.webp"
+        "name": "DSC_2242",
+        "path": "imagenes/DSC_2242.webp",
+        "filename": "DSC_2242.webp"
     },
     {
-        "name": "DSC_0923",
-        "path": "imagenes/DSC_0923.webp",
-        "filename": "DSC_0923.webp"
+        "name": "DSC_2243",
+        "path": "imagenes/DSC_2243.webp",
+        "filename": "DSC_2243.webp"
     },
     {
-        "name": "DSC_0924",
-        "path": "imagenes/DSC_0924.webp",
-        "filename": "DSC_0924.webp"
+        "name": "DSC_2244",
+        "path": "imagenes/DSC_2244.webp",
+        "filename": "DSC_2244.webp"
     },
     {
-        "name": "DSC_0925",
-        "path": "imagenes/DSC_0925.webp",
-        "filename": "DSC_0925.webp"
+        "name": "DSC_2245",
+        "path": "imagenes/DSC_2245.webp",
+        "filename": "DSC_2245.webp"
     },
     {
-        "name": "DSC_0926",
-        "path": "imagenes/DSC_0926.webp",
-        "filename": "DSC_0926.webp"
+        "name": "DSC_2246",
+        "path": "imagenes/DSC_2246.webp",
+        "filename": "DSC_2246.webp"
     },
     {
-        "name": "DSC_0927",
-        "path": "imagenes/DSC_0927.webp",
-        "filename": "DSC_0927.webp"
+        "name": "DSC_2247",
+        "path": "imagenes/DSC_2247.webp",
+        "filename": "DSC_2247.webp"
     },
     {
-        "name": "DSC_0928",
-        "path": "imagenes/DSC_0928.webp",
-        "filename": "DSC_0928.webp"
+        "name": "DSC_2248",
+        "path": "imagenes/DSC_2248.webp",
+        "filename": "DSC_2248.webp"
     },
     {
-        "name": "DSC_0929",
-        "path": "imagenes/DSC_0929.webp",
-        "filename": "DSC_0929.webp"
+        "name": "DSC_2249",
+        "path": "imagenes/DSC_2249.webp",
+        "filename": "DSC_2249.webp"
     },
     {
-        "name": "DSC_0930",
-        "path": "imagenes/DSC_0930.webp",
-        "filename": "DSC_0930.webp"
+        "name": "DSC_2250",
+        "path": "imagenes/DSC_2250.webp",
+        "filename": "DSC_2250.webp"
     },
     {
-        "name": "DSC_0931",
-        "path": "imagenes/DSC_0931.webp",
-        "filename": "DSC_0931.webp"
+        "name": "DSC_2251",
+        "path": "imagenes/DSC_2251.webp",
+        "filename": "DSC_2251.webp"
     },
     {
-        "name": "DSC_0932",
-        "path": "imagenes/DSC_0932.webp",
-        "filename": "DSC_0932.webp"
+        "name": "DSC_2252",
+        "path": "imagenes/DSC_2252.webp",
+        "filename": "DSC_2252.webp"
     },
     {
-        "name": "DSC_0933",
-        "path": "imagenes/DSC_0933.webp",
-        "filename": "DSC_0933.webp"
+        "name": "DSC_2253",
+        "path": "imagenes/DSC_2253.webp",
+        "filename": "DSC_2253.webp"
     },
     {
-        "name": "DSC_0934",
-        "path": "imagenes/DSC_0934.webp",
-        "filename": "DSC_0934.webp"
+        "name": "DSC_2254",
+        "path": "imagenes/DSC_2254.webp",
+        "filename": "DSC_2254.webp"
     },
     {
-        "name": "DSC_0935",
-        "path": "imagenes/DSC_0935.webp",
-        "filename": "DSC_0935.webp"
+        "name": "DSC_2255",
+        "path": "imagenes/DSC_2255.webp",
+        "filename": "DSC_2255.webp"
     },
     {
-        "name": "DSC_0936",
-        "path": "imagenes/DSC_0936.webp",
-        "filename": "DSC_0936.webp"
+        "name": "DSC_2256",
+        "path": "imagenes/DSC_2256.webp",
+        "filename": "DSC_2256.webp"
     },
     {
-        "name": "DSC_0937",
-        "path": "imagenes/DSC_0937.webp",
-        "filename": "DSC_0937.webp"
+        "name": "DSC_2257",
+        "path": "imagenes/DSC_2257.webp",
+        "filename": "DSC_2257.webp"
     },
     {
-        "name": "DSC_0938",
-        "path": "imagenes/DSC_0938.webp",
-        "filename": "DSC_0938.webp"
+        "name": "DSC_2258",
+        "path": "imagenes/DSC_2258.webp",
+        "filename": "DSC_2258.webp"
     },
     {
-        "name": "DSC_0939",
-        "path": "imagenes/DSC_0939.webp",
-        "filename": "DSC_0939.webp"
+        "name": "DSC_2259",
+        "path": "imagenes/DSC_2259.webp",
+        "filename": "DSC_2259.webp"
     },
     {
-        "name": "DSC_0940",
-        "path": "imagenes/DSC_0940.webp",
-        "filename": "DSC_0940.webp"
+        "name": "DSC_2260",
+        "path": "imagenes/DSC_2260.webp",
+        "filename": "DSC_2260.webp"
     },
     {
-        "name": "DSC_0941",
-        "path": "imagenes/DSC_0941.webp",
-        "filename": "DSC_0941.webp"
+        "name": "DSC_2261",
+        "path": "imagenes/DSC_2261.webp",
+        "filename": "DSC_2261.webp"
     },
     {
-        "name": "DSC_0942",
-        "path": "imagenes/DSC_0942.webp",
-        "filename": "DSC_0942.webp"
+        "name": "DSC_2262",
+        "path": "imagenes/DSC_2262.webp",
+        "filename": "DSC_2262.webp"
     },
     {
-        "name": "DSC_0943",
-        "path": "imagenes/DSC_0943.webp",
-        "filename": "DSC_0943.webp"
+        "name": "DSC_2263",
+        "path": "imagenes/DSC_2263.webp",
+        "filename": "DSC_2263.webp"
     },
     {
-        "name": "DSC_0944",
-        "path": "imagenes/DSC_0944.webp",
-        "filename": "DSC_0944.webp"
+        "name": "DSC_2264",
+        "path": "imagenes/DSC_2264.webp",
+        "filename": "DSC_2264.webp"
     },
     {
-        "name": "DSC_0945",
-        "path": "imagenes/DSC_0945.webp",
-        "filename": "DSC_0945.webp"
+        "name": "DSC_2265",
+        "path": "imagenes/DSC_2265.webp",
+        "filename": "DSC_2265.webp"
     },
     {
-        "name": "DSC_0946",
-        "path": "imagenes/DSC_0946.webp",
-        "filename": "DSC_0946.webp"
+        "name": "DSC_2266",
+        "path": "imagenes/DSC_2266.webp",
+        "filename": "DSC_2266.webp"
     },
     {
-        "name": "DSC_0947",
-        "path": "imagenes/DSC_0947.webp",
-        "filename": "DSC_0947.webp"
+        "name": "DSC_2267",
+        "path": "imagenes/DSC_2267.webp",
+        "filename": "DSC_2267.webp"
     },
     {
-        "name": "DSC_0948",
-        "path": "imagenes/DSC_0948.webp",
-        "filename": "DSC_0948.webp"
+        "name": "DSC_2268",
+        "path": "imagenes/DSC_2268.webp",
+        "filename": "DSC_2268.webp"
     },
     {
-        "name": "DSC_0949",
-        "path": "imagenes/DSC_0949.webp",
-        "filename": "DSC_0949.webp"
+        "name": "DSC_2269",
+        "path": "imagenes/DSC_2269.webp",
+        "filename": "DSC_2269.webp"
     },
     {
-        "name": "DSC_0952",
-        "path": "imagenes/DSC_0952.webp",
-        "filename": "DSC_0952.webp"
+        "name": "DSC_2270",
+        "path": "imagenes/DSC_2270.webp",
+        "filename": "DSC_2270.webp"
     },
     {
-        "name": "DSC_0953",
-        "path": "imagenes/DSC_0953.webp",
-        "filename": "DSC_0953.webp"
+        "name": "DSC_2271",
+        "path": "imagenes/DSC_2271.webp",
+        "filename": "DSC_2271.webp"
     },
     {
-        "name": "DSC_0954",
-        "path": "imagenes/DSC_0954.webp",
-        "filename": "DSC_0954.webp"
+        "name": "DSC_2272",
+        "path": "imagenes/DSC_2272.webp",
+        "filename": "DSC_2272.webp"
     },
     {
-        "name": "DSC_0955",
-        "path": "imagenes/DSC_0955.webp",
-        "filename": "DSC_0955.webp"
+        "name": "DSC_2273",
+        "path": "imagenes/DSC_2273.webp",
+        "filename": "DSC_2273.webp"
     },
     {
-        "name": "DSC_0956",
-        "path": "imagenes/DSC_0956.webp",
-        "filename": "DSC_0956.webp"
+        "name": "DSC_2274",
+        "path": "imagenes/DSC_2274.webp",
+        "filename": "DSC_2274.webp"
     },
     {
-        "name": "DSC_0957",
-        "path": "imagenes/DSC_0957.webp",
-        "filename": "DSC_0957.webp"
+        "name": "DSC_2275",
+        "path": "imagenes/DSC_2275.webp",
+        "filename": "DSC_2275.webp"
     },
     {
-        "name": "DSC_0958",
-        "path": "imagenes/DSC_0958.webp",
-        "filename": "DSC_0958.webp"
+        "name": "DSC_2276",
+        "path": "imagenes/DSC_2276.webp",
+        "filename": "DSC_2276.webp"
     },
     {
-        "name": "DSC_0959",
-        "path": "imagenes/DSC_0959.webp",
-        "filename": "DSC_0959.webp"
+        "name": "DSC_2277",
+        "path": "imagenes/DSC_2277.webp",
+        "filename": "DSC_2277.webp"
     },
     {
-        "name": "DSC_0960",
-        "path": "imagenes/DSC_0960.webp",
-        "filename": "DSC_0960.webp"
+        "name": "DSC_2278",
+        "path": "imagenes/DSC_2278.webp",
+        "filename": "DSC_2278.webp"
     },
     {
-        "name": "DSC_0961",
-        "path": "imagenes/DSC_0961.webp",
-        "filename": "DSC_0961.webp"
+        "name": "DSC_2279",
+        "path": "imagenes/DSC_2279.webp",
+        "filename": "DSC_2279.webp"
     },
     {
-        "name": "DSC_0962",
-        "path": "imagenes/DSC_0962.webp",
-        "filename": "DSC_0962.webp"
+        "name": "DSC_2280",
+        "path": "imagenes/DSC_2280.webp",
+        "filename": "DSC_2280.webp"
     },
     {
-        "name": "DSC_0963",
-        "path": "imagenes/DSC_0963.webp",
-        "filename": "DSC_0963.webp"
+        "name": "DSC_2281",
+        "path": "imagenes/DSC_2281.webp",
+        "filename": "DSC_2281.webp"
     },
     {
-        "name": "DSC_0964",
-        "path": "imagenes/DSC_0964.webp",
-        "filename": "DSC_0964.webp"
+        "name": "DSC_2282",
+        "path": "imagenes/DSC_2282.webp",
+        "filename": "DSC_2282.webp"
     },
     {
-        "name": "DSC_0965",
-        "path": "imagenes/DSC_0965.webp",
-        "filename": "DSC_0965.webp"
+        "name": "DSC_2283",
+        "path": "imagenes/DSC_2283.webp",
+        "filename": "DSC_2283.webp"
     },
     {
-        "name": "DSC_0966",
-        "path": "imagenes/DSC_0966.webp",
-        "filename": "DSC_0966.webp"
+        "name": "DSC_2284",
+        "path": "imagenes/DSC_2284.webp",
+        "filename": "DSC_2284.webp"
     },
     {
-        "name": "DSC_0967",
-        "path": "imagenes/DSC_0967.webp",
-        "filename": "DSC_0967.webp"
+        "name": "DSC_2285",
+        "path": "imagenes/DSC_2285.webp",
+        "filename": "DSC_2285.webp"
     },
     {
-        "name": "DSC_0968",
-        "path": "imagenes/DSC_0968.webp",
-        "filename": "DSC_0968.webp"
+        "name": "DSC_2286",
+        "path": "imagenes/DSC_2286.webp",
+        "filename": "DSC_2286.webp"
     },
     {
-        "name": "DSC_0969",
-        "path": "imagenes/DSC_0969.webp",
-        "filename": "DSC_0969.webp"
+        "name": "DSC_2287",
+        "path": "imagenes/DSC_2287.webp",
+        "filename": "DSC_2287.webp"
     },
     {
-        "name": "DSC_0970",
-        "path": "imagenes/DSC_0970.webp",
-        "filename": "DSC_0970.webp"
+        "name": "DSC_2288",
+        "path": "imagenes/DSC_2288.webp",
+        "filename": "DSC_2288.webp"
     },
     {
-        "name": "DSC_0971",
-        "path": "imagenes/DSC_0971.webp",
-        "filename": "DSC_0971.webp"
+        "name": "DSC_2289",
+        "path": "imagenes/DSC_2289.webp",
+        "filename": "DSC_2289.webp"
     },
     {
-        "name": "DSC_0972",
-        "path": "imagenes/DSC_0972.webp",
-        "filename": "DSC_0972.webp"
+        "name": "DSC_2290",
+        "path": "imagenes/DSC_2290.webp",
+        "filename": "DSC_2290.webp"
     },
     {
-        "name": "DSC_0973",
-        "path": "imagenes/DSC_0973.webp",
-        "filename": "DSC_0973.webp"
+        "name": "DSC_2291",
+        "path": "imagenes/DSC_2291.webp",
+        "filename": "DSC_2291.webp"
     },
     {
-        "name": "DSC_0974",
-        "path": "imagenes/DSC_0974.webp",
-        "filename": "DSC_0974.webp"
+        "name": "DSC_2292",
+        "path": "imagenes/DSC_2292.webp",
+        "filename": "DSC_2292.webp"
     },
     {
-        "name": "DSC_0975",
-        "path": "imagenes/DSC_0975.webp",
-        "filename": "DSC_0975.webp"
+        "name": "DSC_2293",
+        "path": "imagenes/DSC_2293.webp",
+        "filename": "DSC_2293.webp"
     },
     {
-        "name": "DSC_0976",
-        "path": "imagenes/DSC_0976.webp",
-        "filename": "DSC_0976.webp"
+        "name": "DSC_2294",
+        "path": "imagenes/DSC_2294.webp",
+        "filename": "DSC_2294.webp"
     },
     {
-        "name": "DSC_0977",
-        "path": "imagenes/DSC_0977.webp",
-        "filename": "DSC_0977.webp"
+        "name": "DSC_2295",
+        "path": "imagenes/DSC_2295.webp",
+        "filename": "DSC_2295.webp"
     },
     {
-        "name": "DSC_0978",
-        "path": "imagenes/DSC_0978.webp",
-        "filename": "DSC_0978.webp"
+        "name": "DSC_2296",
+        "path": "imagenes/DSC_2296.webp",
+        "filename": "DSC_2296.webp"
     },
     {
-        "name": "DSC_0979",
-        "path": "imagenes/DSC_0979.webp",
-        "filename": "DSC_0979.webp"
+        "name": "DSC_2297",
+        "path": "imagenes/DSC_2297.webp",
+        "filename": "DSC_2297.webp"
     },
     {
-        "name": "DSC_0980",
-        "path": "imagenes/DSC_0980.webp",
-        "filename": "DSC_0980.webp"
+        "name": "DSC_2298",
+        "path": "imagenes/DSC_2298.webp",
+        "filename": "DSC_2298.webp"
     },
     {
-        "name": "DSC_0981",
-        "path": "imagenes/DSC_0981.webp",
-        "filename": "DSC_0981.webp"
+        "name": "DSC_2299",
+        "path": "imagenes/DSC_2299.webp",
+        "filename": "DSC_2299.webp"
     },
     {
-        "name": "DSC_0982",
-        "path": "imagenes/DSC_0982.webp",
-        "filename": "DSC_0982.webp"
+        "name": "DSC_2300",
+        "path": "imagenes/DSC_2300.webp",
+        "filename": "DSC_2300.webp"
     },
     {
-        "name": "DSC_0983",
-        "path": "imagenes/DSC_0983.webp",
-        "filename": "DSC_0983.webp"
+        "name": "DSC_2301",
+        "path": "imagenes/DSC_2301.webp",
+        "filename": "DSC_2301.webp"
     },
     {
-        "name": "DSC_0984",
-        "path": "imagenes/DSC_0984.webp",
-        "filename": "DSC_0984.webp"
+        "name": "DSC_2302",
+        "path": "imagenes/DSC_2302.webp",
+        "filename": "DSC_2302.webp"
     },
     {
-        "name": "DSC_0985",
-        "path": "imagenes/DSC_0985.webp",
-        "filename": "DSC_0985.webp"
+        "name": "DSC_2303",
+        "path": "imagenes/DSC_2303.webp",
+        "filename": "DSC_2303.webp"
     },
     {
-        "name": "DSC_0986",
-        "path": "imagenes/DSC_0986.webp",
-        "filename": "DSC_0986.webp"
+        "name": "DSC_2304",
+        "path": "imagenes/DSC_2304.webp",
+        "filename": "DSC_2304.webp"
     },
     {
-        "name": "DSC_0987",
-        "path": "imagenes/DSC_0987.webp",
-        "filename": "DSC_0987.webp"
+        "name": "DSC_2305",
+        "path": "imagenes/DSC_2305.webp",
+        "filename": "DSC_2305.webp"
     },
     {
-        "name": "DSC_0988",
-        "path": "imagenes/DSC_0988.webp",
-        "filename": "DSC_0988.webp"
+        "name": "DSC_2306",
+        "path": "imagenes/DSC_2306.webp",
+        "filename": "DSC_2306.webp"
     },
     {
-        "name": "DSC_0989",
-        "path": "imagenes/DSC_0989.webp",
-        "filename": "DSC_0989.webp"
+        "name": "DSC_2307",
+        "path": "imagenes/DSC_2307.webp",
+        "filename": "DSC_2307.webp"
     },
     {
-        "name": "DSC_0990",
-        "path": "imagenes/DSC_0990.webp",
-        "filename": "DSC_0990.webp"
+        "name": "DSC_2308",
+        "path": "imagenes/DSC_2308.webp",
+        "filename": "DSC_2308.webp"
     },
     {
-        "name": "DSC_0991",
-        "path": "imagenes/DSC_0991.webp",
-        "filename": "DSC_0991.webp"
+        "name": "DSC_2309",
+        "path": "imagenes/DSC_2309.webp",
+        "filename": "DSC_2309.webp"
     },
     {
-        "name": "DSC_0992",
-        "path": "imagenes/DSC_0992.webp",
-        "filename": "DSC_0992.webp"
+        "name": "DSC_2310",
+        "path": "imagenes/DSC_2310.webp",
+        "filename": "DSC_2310.webp"
     },
     {
-        "name": "DSC_0993",
-        "path": "imagenes/DSC_0993.webp",
-        "filename": "DSC_0993.webp"
+        "name": "DSC_2311",
+        "path": "imagenes/DSC_2311.webp",
+        "filename": "DSC_2311.webp"
     },
     {
-        "name": "DSC_0994",
-        "path": "imagenes/DSC_0994.webp",
-        "filename": "DSC_0994.webp"
+        "name": "DSC_2312",
+        "path": "imagenes/DSC_2312.webp",
+        "filename": "DSC_2312.webp"
     },
     {
-        "name": "DSC_0995",
-        "path": "imagenes/DSC_0995.webp",
-        "filename": "DSC_0995.webp"
+        "name": "DSC_2313",
+        "path": "imagenes/DSC_2313.webp",
+        "filename": "DSC_2313.webp"
     },
     {
-        "name": "DSC_0996",
-        "path": "imagenes/DSC_0996.webp",
-        "filename": "DSC_0996.webp"
+        "name": "DSC_2314",
+        "path": "imagenes/DSC_2314.webp",
+        "filename": "DSC_2314.webp"
     },
     {
-        "name": "DSC_0997",
-        "path": "imagenes/DSC_0997.webp",
-        "filename": "DSC_0997.webp"
+        "name": "DSC_2315",
+        "path": "imagenes/DSC_2315.webp",
+        "filename": "DSC_2315.webp"
     },
     {
-        "name": "DSC_0998",
-        "path": "imagenes/DSC_0998.webp",
-        "filename": "DSC_0998.webp"
+        "name": "DSC_2316",
+        "path": "imagenes/DSC_2316.webp",
+        "filename": "DSC_2316.webp"
     },
     {
-        "name": "DSC_0999",
-        "path": "imagenes/DSC_0999.webp",
-        "filename": "DSC_0999.webp"
+        "name": "DSC_2317",
+        "path": "imagenes/DSC_2317.webp",
+        "filename": "DSC_2317.webp"
     },
     {
-        "name": "DSC_1000",
-        "path": "imagenes/DSC_1000.webp",
-        "filename": "DSC_1000.webp"
+        "name": "DSC_2318",
+        "path": "imagenes/DSC_2318.webp",
+        "filename": "DSC_2318.webp"
     },
     {
-        "name": "DSC_1001",
-        "path": "imagenes/DSC_1001.webp",
-        "filename": "DSC_1001.webp"
+        "name": "DSC_2319",
+        "path": "imagenes/DSC_2319.webp",
+        "filename": "DSC_2319.webp"
     },
     {
-        "name": "DSC_1002",
-        "path": "imagenes/DSC_1002.webp",
-        "filename": "DSC_1002.webp"
+        "name": "DSC_2320",
+        "path": "imagenes/DSC_2320.webp",
+        "filename": "DSC_2320.webp"
     },
     {
-        "name": "DSC_1003",
-        "path": "imagenes/DSC_1003.webp",
-        "filename": "DSC_1003.webp"
+        "name": "DSC_2321",
+        "path": "imagenes/DSC_2321.webp",
+        "filename": "DSC_2321.webp"
     },
     {
-        "name": "DSC_1004",
-        "path": "imagenes/DSC_1004.webp",
-        "filename": "DSC_1004.webp"
+        "name": "DSC_2322",
+        "path": "imagenes/DSC_2322.webp",
+        "filename": "DSC_2322.webp"
     },
     {
-        "name": "DSC_1005",
-        "path": "imagenes/DSC_1005.webp",
-        "filename": "DSC_1005.webp"
+        "name": "DSC_2323",
+        "path": "imagenes/DSC_2323.webp",
+        "filename": "DSC_2323.webp"
     },
     {
-        "name": "DSC_1006",
-        "path": "imagenes/DSC_1006.webp",
-        "filename": "DSC_1006.webp"
+        "name": "DSC_2324",
+        "path": "imagenes/DSC_2324.webp",
+        "filename": "DSC_2324.webp"
     },
     {
-        "name": "DSC_1007",
-        "path": "imagenes/DSC_1007.webp",
-        "filename": "DSC_1007.webp"
+        "name": "DSC_2325",
+        "path": "imagenes/DSC_2325.webp",
+        "filename": "DSC_2325.webp"
     },
     {
-        "name": "DSC_1008",
-        "path": "imagenes/DSC_1008.webp",
-        "filename": "DSC_1008.webp"
+        "name": "DSC_2326",
+        "path": "imagenes/DSC_2326.webp",
+        "filename": "DSC_2326.webp"
     },
     {
-        "name": "DSC_1009",
-        "path": "imagenes/DSC_1009.webp",
-        "filename": "DSC_1009.webp"
+        "name": "DSC_2327",
+        "path": "imagenes/DSC_2327.webp",
+        "filename": "DSC_2327.webp"
     },
     {
-        "name": "DSC_1010",
-        "path": "imagenes/DSC_1010.webp",
-        "filename": "DSC_1010.webp"
+        "name": "DSC_2328",
+        "path": "imagenes/DSC_2328.webp",
+        "filename": "DSC_2328.webp"
     },
     {
-        "name": "DSC_1011",
-        "path": "imagenes/DSC_1011.webp",
-        "filename": "DSC_1011.webp"
+        "name": "DSC_2329",
+        "path": "imagenes/DSC_2329.webp",
+        "filename": "DSC_2329.webp"
     },
     {
-        "name": "DSC_1012",
-        "path": "imagenes/DSC_1012.webp",
-        "filename": "DSC_1012.webp"
+        "name": "DSC_2330",
+        "path": "imagenes/DSC_2330.webp",
+        "filename": "DSC_2330.webp"
     },
     {
-        "name": "DSC_1013",
-        "path": "imagenes/DSC_1013.webp",
-        "filename": "DSC_1013.webp"
+        "name": "DSC_2331",
+        "path": "imagenes/DSC_2331.webp",
+        "filename": "DSC_2331.webp"
+    },
+    {
+        "name": "DSC_2332",
+        "path": "imagenes/DSC_2332.webp",
+        "filename": "DSC_2332.webp"
+    },
+    {
+        "name": "DSC_2333",
+        "path": "imagenes/DSC_2333.webp",
+        "filename": "DSC_2333.webp"
+    },
+    {
+        "name": "DSC_2334",
+        "path": "imagenes/DSC_2334.webp",
+        "filename": "DSC_2334.webp"
+    },
+    {
+        "name": "DSC_2335",
+        "path": "imagenes/DSC_2335.webp",
+        "filename": "DSC_2335.webp"
+    },
+    {
+        "name": "DSC_2336",
+        "path": "imagenes/DSC_2336.webp",
+        "filename": "DSC_2336.webp"
+    },
+    {
+        "name": "DSC_2337",
+        "path": "imagenes/DSC_2337.webp",
+        "filename": "DSC_2337.webp"
+    },
+    {
+        "name": "DSC_2338",
+        "path": "imagenes/DSC_2338.webp",
+        "filename": "DSC_2338.webp"
+    },
+    {
+        "name": "DSC_2339",
+        "path": "imagenes/DSC_2339.webp",
+        "filename": "DSC_2339.webp"
+    },
+    {
+        "name": "DSC_2340",
+        "path": "imagenes/DSC_2340.webp",
+        "filename": "DSC_2340.webp"
+    },
+    {
+        "name": "DSC_2341",
+        "path": "imagenes/DSC_2341.webp",
+        "filename": "DSC_2341.webp"
+    },
+    {
+        "name": "DSC_2342",
+        "path": "imagenes/DSC_2342.webp",
+        "filename": "DSC_2342.webp"
+    },
+    {
+        "name": "DSC_2343",
+        "path": "imagenes/DSC_2343.webp",
+        "filename": "DSC_2343.webp"
+    },
+    {
+        "name": "DSC_2344",
+        "path": "imagenes/DSC_2344.webp",
+        "filename": "DSC_2344.webp"
+    },
+    {
+        "name": "DSC_2345",
+        "path": "imagenes/DSC_2345.webp",
+        "filename": "DSC_2345.webp"
+    },
+    {
+        "name": "DSC_2346",
+        "path": "imagenes/DSC_2346.webp",
+        "filename": "DSC_2346.webp"
+    },
+    {
+        "name": "DSC_2347",
+        "path": "imagenes/DSC_2347.webp",
+        "filename": "DSC_2347.webp"
+    },
+    {
+        "name": "DSC_2348",
+        "path": "imagenes/DSC_2348.webp",
+        "filename": "DSC_2348.webp"
+    },
+    {
+        "name": "DSC_2349",
+        "path": "imagenes/DSC_2349.webp",
+        "filename": "DSC_2349.webp"
+    },
+    {
+        "name": "DSC_2350",
+        "path": "imagenes/DSC_2350.webp",
+        "filename": "DSC_2350.webp"
+    },
+    {
+        "name": "DSC_2351",
+        "path": "imagenes/DSC_2351.webp",
+        "filename": "DSC_2351.webp"
+    },
+    {
+        "name": "DSC_2352",
+        "path": "imagenes/DSC_2352.webp",
+        "filename": "DSC_2352.webp"
+    },
+    {
+        "name": "DSC_2353",
+        "path": "imagenes/DSC_2353.webp",
+        "filename": "DSC_2353.webp"
+    },
+    {
+        "name": "DSC_2354",
+        "path": "imagenes/DSC_2354.webp",
+        "filename": "DSC_2354.webp"
+    },
+    {
+        "name": "DSC_2355",
+        "path": "imagenes/DSC_2355.webp",
+        "filename": "DSC_2355.webp"
+    },
+    {
+        "name": "DSC_2356",
+        "path": "imagenes/DSC_2356.webp",
+        "filename": "DSC_2356.webp"
+    },
+    {
+        "name": "DSC_2357",
+        "path": "imagenes/DSC_2357.webp",
+        "filename": "DSC_2357.webp"
+    },
+    {
+        "name": "DSC_2358",
+        "path": "imagenes/DSC_2358.webp",
+        "filename": "DSC_2358.webp"
+    },
+    {
+        "name": "DSC_2359",
+        "path": "imagenes/DSC_2359.webp",
+        "filename": "DSC_2359.webp"
+    },
+    {
+        "name": "DSC_2360",
+        "path": "imagenes/DSC_2360.webp",
+        "filename": "DSC_2360.webp"
+    },
+    {
+        "name": "DSC_2361",
+        "path": "imagenes/DSC_2361.webp",
+        "filename": "DSC_2361.webp"
+    },
+    {
+        "name": "DSC_2362",
+        "path": "imagenes/DSC_2362.webp",
+        "filename": "DSC_2362.webp"
+    },
+    {
+        "name": "DSC_2363",
+        "path": "imagenes/DSC_2363.webp",
+        "filename": "DSC_2363.webp"
+    },
+    {
+        "name": "DSC_2364",
+        "path": "imagenes/DSC_2364.webp",
+        "filename": "DSC_2364.webp"
+    },
+    {
+        "name": "DSC_2365",
+        "path": "imagenes/DSC_2365.webp",
+        "filename": "DSC_2365.webp"
+    },
+    {
+        "name": "DSC_2366",
+        "path": "imagenes/DSC_2366.webp",
+        "filename": "DSC_2366.webp"
+    },
+    {
+        "name": "DSC_2367",
+        "path": "imagenes/DSC_2367.webp",
+        "filename": "DSC_2367.webp"
+    },
+    {
+        "name": "DSC_2368",
+        "path": "imagenes/DSC_2368.webp",
+        "filename": "DSC_2368.webp"
+    },
+    {
+        "name": "DSC_2369",
+        "path": "imagenes/DSC_2369.webp",
+        "filename": "DSC_2369.webp"
+    },
+    {
+        "name": "DJI_20260605_165337_603",
+        "path": "imagenes/DJI_20260605_165337_603.webp",
+        "filename": "DJI_20260605_165337_603.webp"
+    },
+    {
+        "name": "DJI_20260605_165346_978",
+        "path": "imagenes/DJI_20260605_165346_978.webp",
+        "filename": "DJI_20260605_165346_978.webp"
+    },
+    {
+        "name": "DJI_20260605_165352_531",
+        "path": "imagenes/DJI_20260605_165352_531.webp",
+        "filename": "DJI_20260605_165352_531.webp"
+    },
+    {
+        "name": "DJI_20260605_165424_617",
+        "path": "imagenes/DJI_20260605_165424_617.webp",
+        "filename": "DJI_20260605_165424_617.webp"
+    },
+    {
+        "name": "DJI_20260605_165427_467",
+        "path": "imagenes/DJI_20260605_165427_467.webp",
+        "filename": "DJI_20260605_165427_467.webp"
     }
 ];
 
 window.addEventListener('DOMContentLoaded', function() {
-    console.log(`Cargadas ${photos.length} fotos`);
+    console.log('Cargadas ' + photos.length + ' fotos');
     renderGallery();
     updateStats();
 });
