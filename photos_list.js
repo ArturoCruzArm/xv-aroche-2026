@@ -1,5 +1,5 @@
 // Lista de fotos generada automaticamente
-// XV Aroche 2026
+// XV Hernández 2026
 // Total de fotos: 195
 // Generado: 2026-06-09
 
