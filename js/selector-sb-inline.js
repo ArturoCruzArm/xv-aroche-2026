@@ -30,7 +30,6 @@
         try {
             const eid = await getEventoId();
             if (!eid) return;
-            await fetch(SUPABASE_URL + '/rest/v1/selecciones?evento_id=eq.' + eid, { method: 'DELETE', headers: SB_H });
             const entries = Object.entries(sels).filter(function(e) {
                 var s = e[1];
                 return s && ((s.categories && s.categories.length) || s.notes);
@@ -39,9 +38,15 @@
             // Store as individual rows keyed by filename index, plus full snapshot in datos
             var snapshot = {};
             entries.forEach(function(e) { snapshot[e[0]] = e[1]; });
-            await fetch(SUPABASE_URL + '/rest/v1/selecciones', {
+            var _clockKey = SB_KEY + '_clock';
+            var _clock = 0;
+            try { _clock = Number(localStorage.getItem(_clockKey) || '0'); } catch(e) {}
+            _clock++;
+            try { localStorage.setItem(_clockKey, String(_clock)); } catch(e) {}
+            snapshot._sync = { clock: _clock, sid: sid, updatedAt: new Date().toISOString() };
+            await fetch(SUPABASE_URL + '/rest/v1/selecciones?on_conflict=evento_id,foto_index', {
                 method: 'POST',
-                headers: Object.assign({}, SB_H, { 'Prefer': 'return=minimal' }),
+                headers: Object.assign({}, SB_H, { 'Prefer': 'resolution=merge-duplicates,return=minimal' }),
                 body: JSON.stringify([{
                     evento_id: eid,
                     session_id: sid,
@@ -50,7 +55,8 @@
                     invitacion: false,
                     descartada: false,
                     ampliacion: false,
-                    datos: snapshot
+                    datos: snapshot,
+                    code_version: 5
                 }])
             });
         } catch(e) { sbOk = false; }
