@@ -1055,7 +1055,7 @@
             <h2 class="section-title">Nuestro Video</h2>
             <p class="section-subtitle">Un momento para recordar siempre</p>
             <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/OCG8AacS5Y8?rel=0&modestbranding=1&hd=1&vq=hd1080" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                <iframe id="ytPlayer" src="https://www.youtube.com/embed/OCG8AacS5Y8?rel=0&modestbranding=1&hd=1&vq=hd1080&enablejsapi=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
             </div>
         </div>
     </section>
@@ -1415,6 +1415,27 @@ function attachHandler() {
         if (guestsInput) guestsInput.value = g.pases_asignados;
     }).catch(function(){});
 })();
+</script>
+<script>
+/* ===== YouTube ↔ música: no empalmar ===== */
+var tag = document.createElement('script');
+tag.src = 'https://www.youtube.com/iframe_api';
+document.head.appendChild(tag);
+var _wasMusicPlaying = false;
+function onYouTubeIframeAPIReady() {
+    new YT.Player('ytPlayer', {
+        events: {
+            onStateChange: function(e) {
+                if (e.data === YT.PlayerState.PLAYING) {
+                    _wasMusicPlaying = playing;
+                    if (playing) { audio.pause(); playing = false; icon.textContent = '🎵'; btn.classList.remove('playing'); btn.dataset.label = 'Reproducir música'; }
+                } else if (e.data === YT.PlayerState.PAUSED || e.data === YT.PlayerState.ENDED) {
+                    if (_wasMusicPlaying) { audio.play().then(function(){ playing = true; icon.textContent = '⏸'; btn.classList.add('playing'); btn.dataset.label = 'Pausar música'; }).catch(function(){}); }
+                }
+            }
+        }
+    });
+}
 </script>
 </body>
 </html>
